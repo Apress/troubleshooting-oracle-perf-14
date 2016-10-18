@@ -1,0 +1,1042 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <base href="http://download.oracle.com/otn_software/"/>
+  <script language="javascript" type="text/javascript" src="emviewers/scripts/flashver.js">
+   <!--Test flash version-->
+  </script>
+  <style>
+      body { margin: 0px; overflow:hidden }
+    </style>
+ </head>
+ <body scroll="no">
+  <script type="text/xml">
+   <!--FXTMODEL-->
+   <report db_version="11.2.0.3.0" elapsed_time="0.34" cpu_time="0.34">
+    <report_id><![CDATA[/orarep/sqlmonitor/main?bucket_max_count=128&event_detail=yes&report_level=TYPICAL&sql_exec_id=16777216&sql_id=5kwfj03dc3dp1]]></report_id>
+    <sql_monitor_report version="4.0" sysdate="02/14/2014 10:59:53">
+     <report_parameters>
+      <sql_id>5kwfj03dc3dp1</sql_id>
+      <sql_exec_id>16777216</sql_exec_id>
+      <bucket_count>38</bucket_count>
+      <interval_start>02/14/2014 10:59:17</interval_start>
+      <interval_end>02/14/2014 10:59:54</interval_end>
+     </report_parameters>
+     <target instance_id="1" session_id="167" session_serial="13851" sql_id="5kwfj03dc3dp1" sql_exec_start="02/14/2014 10:59:17" sql_exec_id="16777216" sql_plan_hash="463527652" db_unique_name="DBM11203" db_platform_name="Linux x86 64-bit" report_host_name="helicon">
+      <user_id>46</user_id>
+      <user>SOE</user>
+      <program>sqlplus.exe</program>
+      <module>SQL*Plus</module>
+      <service>DBM11203.antognini.ch</service>
+      <sql_fulltext is_full="Y">SELECT /*+ monitor */
+       p.category_id,
+       sum(i.quantity) AS quantity_sold,
+       sum(i.unit_price * i.quantity) AS amount_sold
+FROM orders o, order_items i, products p
+WHERE o.order_id = i.order_id
+AND i.product_id = p.product_id
+AND o.order_status BETWEEN 5 and 9
+GROUP BY p.category_id
+ORDER BY p.category_id</sql_fulltext>
+      <status>DONE (ALL ROWS)</status>
+      <refresh_count>121</refresh_count>
+      <first_refresh_time>02/14/2014 10:59:17</first_refresh_time>
+      <last_refresh_time>02/14/2014 10:59:53</last_refresh_time>
+      <duration>36</duration>
+      <optimizer_env>
+       <param name="active_instance_count">1</param>
+       <param name="is_recur_flags">0</param>
+       <param name="parallel_autodop">0</param>
+       <param name="parallel_ddl_mode">enabled</param>
+       <param name="parallel_ddldml">0</param>
+       <param name="parallel_degree">0</param>
+       <param name="parallel_dml_mode">disabled</param>
+       <param name="parallel_execution_enabled">true</param>
+       <param name="parallel_max_degree">16</param>
+       <param name="parallel_query_default_dop">0</param>
+       <param name="parallel_query_mode">disabled</param>
+       <param name="pga_aggregate_target">131072 KB</param>
+       <param name="total_cpu_count">8</param>
+      </optimizer_env>
+     </target>
+     <stats type="monitor">
+      <stat name="elapsed_time">35252766</stat>
+      <stat name="cpu_time">23279462</stat>
+      <stat name="user_io_wait_time">11949593</stat>
+      <stat name="other_wait_time">23711</stat>
+      <stat name="user_fetch_count">101</stat>
+      <stat name="buffer_gets">205934</stat>
+      <stat name="disk_reads">7000</stat>
+      <stat name="direct_writes">3767</stat>
+      <stat name="read_reqs">7000</stat>
+      <stat name="read_bytes">2634563584</stat>
+      <stat name="write_reqs">3767</stat>
+      <stat name="write_bytes">956637184</stat>
+     </stats>
+     <activity_sampled first_sample_time="02/14/2014 10:59:18" last_sample_time="02/14/2014 10:59:52" duration="35" count="35" wait_count="9" cpu_count="26" cpu_cores="8" hyperthread="N">
+      <activity class="Cpu">26</activity>
+      <activity class="User I/O" event="direct path read">8</activity>
+      <activity class="User I/O" event="direct path read temp">1</activity>
+      <activity_histogram bucket_interval="1" bucket_count="38" start_time="02/14/2014 10:59:17" end_time="02/14/2014 10:59:54" duration="38">
+       <bucket number="2">
+        <activity class="Cpu">1</activity>
+       </bucket>
+       <bucket number="3">
+        <activity class="Cpu">1</activity>
+       </bucket>
+       <bucket number="4">
+        <activity class="User I/O" event="direct path read">1</activity>
+       </bucket>
+       <bucket number="5">
+        <activity class="Cpu">1</activity>
+       </bucket>
+       <bucket number="6">
+        <activity class="Cpu">1</activity>
+       </bucket>
+       <bucket number="7">
+        <activity class="User I/O" event="direct path read">1</activity>
+       </bucket>
+       <bucket number="8">
+        <activity class="User I/O" event="direct path read">1</activity>
+       </bucket>
+       <bucket number="9">
+        <activity class="Cpu">1</activity>
+       </bucket>
+       <bucket number="10">
+        <activity class="User I/O" event="direct path read">1</activity>
+       </bucket>
+       <bucket number="11">
+        <activity class="Cpu">1</activity>
+       </bucket>
+       <bucket number="12">
+        <activity class="User I/O" event="direct path read">1</activity>
+       </bucket>
+       <bucket number="13">
+        <activity class="User I/O" event="direct path read">1</activity>
+       </bucket>
+       <bucket number="14">
+        <activity class="User I/O" event="direct path read">1</activity>
+       </bucket>
+       <bucket number="15">
+        <activity class="Cpu">1</activity>
+       </bucket>
+       <bucket number="16">
+        <activity class="Cpu">1</activity>
+       </bucket>
+       <bucket number="17">
+        <activity class="Cpu">1</activity>
+       </bucket>
+       <bucket number="18">
+        <activity class="Cpu">1</activity>
+       </bucket>
+       <bucket number="19">
+        <activity class="User I/O" event="direct path read">1</activity>
+       </bucket>
+       <bucket number="20">
+        <activity class="Cpu">1</activity>
+       </bucket>
+       <bucket number="21">
+        <activity class="Cpu">1</activity>
+       </bucket>
+       <bucket number="22">
+        <activity class="Cpu">1</activity>
+       </bucket>
+       <bucket number="23">
+        <activity class="Cpu">1</activity>
+       </bucket>
+       <bucket number="24">
+        <activity class="Cpu">1</activity>
+       </bucket>
+       <bucket number="25">
+        <activity class="Cpu">1</activity>
+       </bucket>
+       <bucket number="26">
+        <activity class="User I/O" event="direct path read temp">1</activity>
+       </bucket>
+       <bucket number="27">
+        <activity class="Cpu">1</activity>
+       </bucket>
+       <bucket number="28">
+        <activity class="Cpu">1</activity>
+       </bucket>
+       <bucket number="29">
+        <activity class="Cpu">1</activity>
+       </bucket>
+       <bucket number="30">
+        <activity class="Cpu">1</activity>
+       </bucket>
+       <bucket number="31">
+        <activity class="Cpu">1</activity>
+       </bucket>
+       <bucket number="32">
+        <activity class="Cpu">1</activity>
+       </bucket>
+       <bucket number="33">
+        <activity class="Cpu">1</activity>
+       </bucket>
+       <bucket number="34">
+        <activity class="Cpu">1</activity>
+       </bucket>
+       <bucket number="35">
+        <activity class="Cpu">1</activity>
+       </bucket>
+       <bucket number="36">
+        <activity class="Cpu">1</activity>
+       </bucket>
+      </activity_histogram>
+     </activity_sampled>
+     <activity_detail start_time="02/14/2014 10:59:17" end_time="02/14/2014 10:59:54" first_sample_time="02/14/2014 10:59:18" last_sample_time="02/14/2014 10:59:52" duration="35" sample_interval="1" bucket_interval="1" bucket_count="38" bucket_duration="38" cpu_cores="8" total_cpu_cores="8" hyperthread="N">
+      <bucket number="2">
+       <activity class="Cpu" line="8">1</activity>
+      </bucket>
+      <bucket number="3">
+       <activity class="Cpu" line="8">1</activity>
+      </bucket>
+      <bucket number="4">
+       <activity class="User I/O" event="direct path read" line="8">1</activity>
+      </bucket>
+      <bucket number="5">
+       <activity class="Cpu" line="8">1</activity>
+      </bucket>
+      <bucket number="6">
+       <activity class="Cpu" line="7">1</activity>
+      </bucket>
+      <bucket number="7">
+       <activity class="User I/O" event="direct path read" line="8">1</activity>
+      </bucket>
+      <bucket number="8">
+       <activity class="User I/O" event="direct path read" line="9">1</activity>
+      </bucket>
+      <bucket number="9">
+       <activity class="Cpu" line="9">1</activity>
+      </bucket>
+      <bucket number="10">
+       <activity class="User I/O" event="direct path read" line="9">1</activity>
+      </bucket>
+      <bucket number="11">
+       <activity class="Cpu" line="7">1</activity>
+      </bucket>
+      <bucket number="12">
+       <activity class="User I/O" event="direct path read" line="9">1</activity>
+      </bucket>
+      <bucket number="13">
+       <activity class="User I/O" event="direct path read" line="9">1</activity>
+      </bucket>
+      <bucket number="14">
+       <activity class="User I/O" event="direct path read" line="9">1</activity>
+      </bucket>
+      <bucket number="15">
+       <activity class="Cpu" line="7">1</activity>
+      </bucket>
+      <bucket number="16">
+       <activity class="Cpu" line="7">1</activity>
+      </bucket>
+      <bucket number="17">
+       <activity class="Cpu" line="7">1</activity>
+      </bucket>
+      <bucket number="18">
+       <activity class="Cpu" line="7">1</activity>
+      </bucket>
+      <bucket number="19">
+       <activity class="User I/O" event="direct path read" line="9">1</activity>
+      </bucket>
+      <bucket number="20">
+       <activity class="Cpu" line="7">1</activity>
+      </bucket>
+      <bucket number="21">
+       <activity class="Cpu" line="6">1</activity>
+      </bucket>
+      <bucket number="22">
+       <activity class="Cpu" line="7">1</activity>
+      </bucket>
+      <bucket number="23">
+       <activity class="Cpu" line="6">1</activity>
+      </bucket>
+      <bucket number="24">
+       <activity class="Cpu" line="7">1</activity>
+      </bucket>
+      <bucket number="25">
+       <activity class="Cpu" line="7">1</activity>
+      </bucket>
+      <bucket number="26">
+       <activity class="User I/O" event="direct path read temp" line="7">1</activity>
+      </bucket>
+      <bucket number="27">
+       <activity class="Cpu" line="6">1</activity>
+      </bucket>
+      <bucket number="28">
+       <activity class="Cpu" line="6">1</activity>
+      </bucket>
+      <bucket number="29">
+       <activity class="Cpu" line="7">1</activity>
+      </bucket>
+      <bucket number="30">
+       <activity class="Cpu" line="6">1</activity>
+      </bucket>
+      <bucket number="31">
+       <activity class="Cpu" line="7">1</activity>
+      </bucket>
+      <bucket number="32">
+       <activity class="Cpu" line="7">1</activity>
+      </bucket>
+      <bucket number="33">
+       <activity class="Cpu" line="6">1</activity>
+      </bucket>
+      <bucket number="34">
+       <activity class="Cpu" line="7">1</activity>
+      </bucket>
+      <bucket number="35">
+       <activity class="Cpu" line="6">1</activity>
+      </bucket>
+      <bucket number="36">
+       <activity class="Cpu" line="7">1</activity>
+      </bucket>
+     </activity_detail>
+     <plan>
+      <operation name="SELECT STATEMENT" id="0" depth="0" pos="109028">
+       <cost>109028</cost>
+      </operation>
+      <operation name="SORT" options="GROUP BY" id="1" depth="1" pos="1">
+       <card>199</card>
+       <bytes>8955</bytes>
+       <cost>109028</cost>
+       <io_cost>107357</io_cost>
+       <cpu_cost>39914200261</cpu_cost>
+       <time>00:00:05 </time>
+       <project>(#keys=1) &quot;I&quot;.&quot;CATEGORY_ID&quot;[NUMBER,22], SUM(&quot;ITEM_2&quot;)[22], SUM(&quot;ITEM_3&quot;)[22]</project>
+       <qblock>SEL$C83BBB87</qblock>
+       <other_xml>
+        <info type="db_version">11.2.0.3</info>
+        <info type="parse_schema"><![CDATA["SOE"]]></info>
+        <info type="plan_hash">463527652</info>
+        <info type="plan_hash_2">4025481758</info>
+        <outline_data>
+         <hint><![CDATA[IGNORE_OPTIM_EMBEDDED_HINTS]]></hint>
+         <hint><![CDATA[OPTIMIZER_FEATURES_ENABLE('11.2.0.3')]]></hint>
+         <hint><![CDATA[DB_VERSION('11.2.0.3')]]></hint>
+         <hint><![CDATA[ALL_ROWS]]></hint>
+         <hint><![CDATA[OUTLINE_LEAF(@"SEL$B6B9D974")]]></hint>
+         <hint><![CDATA[OUTLINE_LEAF(@"SEL$C83BBB87")]]></hint>
+         <hint><![CDATA[PLACE_GROUP_BY(@"SEL$F5BB74E1" ( "O"@"SEL$1"   "I"@"SEL$1" ) 9)]]></hint>
+         <hint><![CDATA[OUTLINE(@"SEL$779B8D32")]]></hint>
+         <hint><![CDATA[OUTLINE(@"SEL$F5BB74E1")]]></hint>
+         <hint><![CDATA[MERGE(@"SEL$2")]]></hint>
+         <hint><![CDATA[OUTLINE(@"SEL$1")]]></hint>
+         <hint><![CDATA[OUTLINE(@"SEL$2")]]></hint>
+         <hint><![CDATA[NO_ACCESS(@"SEL$C83BBB87" "VW_GBC_9"@"SEL$779B8D32")]]></hint>
+         <hint><![CDATA[FULL(@"SEL$C83BBB87" "I"@"SEL$2")]]></hint>
+         <hint><![CDATA[INDEX(@"SEL$C83BBB87" "D"@"SEL$2" ("PRODUCT_DESCRIPTIONS"."PRODUCT_ID" "PRODUCT_DESCRIPTIONS"."LANGUAGE_ID"))]]></hint>
+         <hint><![CDATA[LEADING(@"SEL$C83BBB87" "VW_GBC_9"@"SEL$779B8D32" "I"@"SEL$2" "D"@"SEL$2")]]></hint>
+         <hint><![CDATA[USE_HASH(@"SEL$C83BBB87" "I"@"SEL$2")]]></hint>
+         <hint><![CDATA[USE_NL(@"SEL$C83BBB87" "D"@"SEL$2")]]></hint>
+         <hint><![CDATA[SWAP_JOIN_INPUTS(@"SEL$C83BBB87" "I"@"SEL$2")]]></hint>
+         <hint><![CDATA[FULL(@"SEL$B6B9D974" "O"@"SEL$1")]]></hint>
+         <hint><![CDATA[FULL(@"SEL$B6B9D974" "I"@"SEL$1")]]></hint>
+         <hint><![CDATA[LEADING(@"SEL$B6B9D974" "O"@"SEL$1" "I"@"SEL$1")]]></hint>
+         <hint><![CDATA[USE_HASH(@"SEL$B6B9D974" "I"@"SEL$1")]]></hint>
+         <hint><![CDATA[USE_HASH_AGGREGATION(@"SEL$B6B9D974")]]></hint>
+        </outline_data>
+       </other_xml>
+      </operation>
+      <operation name="NESTED LOOPS" options="OUTER" id="2" depth="2" pos="1">
+       <card>1000</card>
+       <bytes>45000</bytes>
+       <cost>109027</cost>
+       <io_cost>107357</io_cost>
+       <cpu_cost>39889859257</cpu_cost>
+       <time>00:00:05 </time>
+       <project>&quot;I&quot;.&quot;CATEGORY_ID&quot;[NUMBER,22], &quot;ITEM_3&quot;[NUMBER,22], &quot;ITEM_2&quot;[NUMBER,22]</project>
+      </operation>
+      <operation name="HASH JOIN" id="3" depth="3" pos="1">
+       <card>1000</card>
+       <bytes>38000</bytes>
+       <cost>109027</cost>
+       <io_cost>107357</io_cost>
+       <cpu_cost>39887959257</cpu_cost>
+       <time>00:00:05 </time>
+       <project>(#keys=1) &quot;I&quot;.&quot;PRODUCT_ID&quot;[NUMBER,22], &quot;I&quot;.&quot;CATEGORY_ID&quot;[NUMBER,22], &quot;ITEM_3&quot;[NUMBER,22], &quot;ITEM_2&quot;[NUMBER,22]</project>
+       <predicates type="access">&quot;ITEM_1&quot;=&quot;I&quot;.&quot;PRODUCT_ID&quot;</predicates>
+      </operation>
+      <operation name="TABLE ACCESS" options="FULL" id="4" depth="4" pos="1">
+       <object>PRODUCT_INFORMATION</object>
+       <card>1000</card>
+       <bytes>8000</bytes>
+       <cost>9</cost>
+       <io_cost>9</io_cost>
+       <cpu_cost>409400</cpu_cost>
+       <time>00:00:01 </time>
+       <project>&quot;I&quot;.&quot;PRODUCT_ID&quot;[NUMBER,22], &quot;I&quot;.&quot;CATEGORY_ID&quot;[NUMBER,22]</project>
+       <qblock>SEL$C83BBB87</qblock>
+       <object_alias>I@SEL$2</object_alias>
+      </operation>
+      <operation name="VIEW" id="5" depth="4" pos="2">
+       <object>VW_GBC_9</object>
+       <card>1000</card>
+       <bytes>30000</bytes>
+       <cost>109017</cost>
+       <io_cost>107348</io_cost>
+       <cpu_cost>39875353856</cpu_cost>
+       <time>00:00:05 </time>
+       <project>&quot;ITEM_1&quot;[NUMBER,22], &quot;ITEM_2&quot;[NUMBER,22], &quot;ITEM_3&quot;[NUMBER,22]</project>
+       <qblock>SEL$B6B9D974</qblock>
+       <object_alias>VW_GBC_9@SEL$779B8D32</object_alias>
+      </operation>
+      <operation name="HASH" options="GROUP BY" id="6" depth="5" pos="1">
+       <card>1000</card>
+       <bytes>26000</bytes>
+       <cost>109017</cost>
+       <io_cost>107348</io_cost>
+       <cpu_cost>39875353856</cpu_cost>
+       <time>00:00:05 </time>
+       <project>&quot;I&quot;.&quot;PRODUCT_ID&quot;[NUMBER,22], SUM(&quot;I&quot;.&quot;UNIT_PRICE&quot;*&quot;I&quot;.&quot;QUANTITY&quot;)[22], SUM(&quot;I&quot;.&quot;QUANTITY&quot;)[22]</project>
+       <qblock>SEL$B6B9D974</qblock>
+      </operation>
+      <operation name="HASH JOIN" id="7" depth="6" pos="1">
+       <card>18191502</card>
+       <bytes>472979052</bytes>
+       <temp_space>126428000</temp_space>
+       <cost>108189</cost>
+       <io_cost>107348</io_cost>
+       <cpu_cost>20085117293</cpu_cost>
+       <time>00:00:05 </time>
+       <project>(#keys=1) &quot;I&quot;.&quot;QUANTITY&quot;[NUMBER,22], &quot;I&quot;.&quot;PRODUCT_ID&quot;[NUMBER,22], &quot;I&quot;.&quot;UNIT_PRICE&quot;[NUMBER,22]</project>
+       <predicates type="access">&quot;O&quot;.&quot;ORDER_ID&quot;=&quot;I&quot;.&quot;ORDER_ID&quot;</predicates>
+      </operation>
+      <operation name="TABLE ACCESS" options="FULL" id="8" depth="7" pos="1">
+       <object>ORDERS</object>
+       <card>6020276</card>
+       <bytes>54182484</bytes>
+       <cost>23642</cost>
+       <io_cost>23477</io_cost>
+       <cpu_cost>3941228543</cpu_cost>
+       <time>00:00:01 </time>
+       <project>&quot;O&quot;.&quot;ORDER_ID&quot;[NUMBER,22]</project>
+       <predicates type="filter">(&quot;O&quot;.&quot;ORDER_STATUS&quot;&gt;=5 AND &quot;O&quot;.&quot;ORDER_STATUS&quot;&lt;=9)</predicates>
+       <qblock>SEL$B6B9D974</qblock>
+       <object_alias>O@SEL$1</object_alias>
+      </operation>
+      <operation name="TABLE ACCESS" options="FULL" id="9" depth="7" pos="2">
+       <object>ORDER_ITEMS</object>
+       <card>32111883</card>
+       <bytes>545902011</bytes>
+       <cost>34238</cost>
+       <io_cost>33892</io_cost>
+       <cpu_cost>8276853120</cpu_cost>
+       <time>00:00:02 </time>
+       <project>&quot;I&quot;.&quot;ORDER_ID&quot;[NUMBER,22], &quot;I&quot;.&quot;PRODUCT_ID&quot;[NUMBER,22], &quot;I&quot;.&quot;UNIT_PRICE&quot;[NUMBER,22], &quot;I&quot;.&quot;QUANTITY&quot;[NUMBER,22]</project>
+       <qblock>SEL$B6B9D974</qblock>
+       <object_alias>I@SEL$1</object_alias>
+      </operation>
+      <operation name="INDEX" options="UNIQUE SCAN" id="10" depth="3" pos="2">
+       <object>PRD_DESC_PK</object>
+       <card>1</card>
+       <bytes>7</bytes>
+       <cost>0</cost>
+       <io_cost>0</io_cost>
+       <cpu_cost>1900</cpu_cost>
+       <predicates type="access">&quot;D&quot;.&quot;PRODUCT_ID&quot;=&quot;I&quot;.&quot;PRODUCT_ID&quot; AND &quot;D&quot;.&quot;LANGUAGE_ID&quot;=SYS_CONTEXT(&apos;USERENV&apos;,&apos;LANG&apos;)</predicates>
+       <qblock>SEL$C83BBB87</qblock>
+       <object_alias>D@SEL$2</object_alias>
+      </operation>
+     </plan>
+     <plan_monitor max_activity_count="16" max_io_reqs="7534" max_io_bytes="1913274368" max_cpu_count="15" max_wait_count="6" max_other_sql_count="0">
+      <operation id="0" name="SELECT STATEMENT" depth="0" position="0">
+       <stats type="plan_monitor">
+        <stat name="first_active">02/14/2014 10:59:52</stat>
+        <stat name="last_active">02/14/2014 10:59:53</stat>
+        <stat name="duration">2</stat>
+        <stat name="from_most_recent">0</stat>
+        <stat name="from_sql_exec_start">35</stat>
+        <stat name="starts">1</stat>
+        <stat name="cardinality">199</stat>
+       </stats>
+      </operation>
+      <operation id="1" parent_id="0" name="SORT" options="GROUP BY" depth="1" position="1">
+       <optimizer>
+        <cardinality>199</cardinality>
+        <bytes>8955</bytes>
+        <cost>109028</cost>
+        <cpu_cost>39914200261</cpu_cost>
+        <io_cost>107357</io_cost>
+        <time>5</time>
+       </optimizer>
+       <stats type="plan_monitor">
+        <stat name="first_active">02/14/2014 10:59:52</stat>
+        <stat name="last_active">02/14/2014 10:59:53</stat>
+        <stat name="duration">2</stat>
+        <stat name="from_most_recent">0</stat>
+        <stat name="from_sql_exec_start">35</stat>
+        <stat name="starts">1</stat>
+        <stat name="cardinality">199</stat>
+        <stat name="max_memory">20480</stat>
+       </stats>
+      </operation>
+      <operation id="2" parent_id="1" name="NESTED LOOPS" options="OUTER" depth="2" position="1">
+       <optimizer>
+        <cardinality>1000</cardinality>
+        <bytes>45000</bytes>
+        <cost>109027</cost>
+        <cpu_cost>39889859257</cpu_cost>
+        <io_cost>107357</io_cost>
+        <time>5</time>
+       </optimizer>
+       <stats type="plan_monitor">
+        <stat name="first_active">02/14/2014 10:59:52</stat>
+        <stat name="last_active">02/14/2014 10:59:52</stat>
+        <stat name="duration">1</stat>
+        <stat name="from_most_recent">1</stat>
+        <stat name="from_sql_exec_start">35</stat>
+        <stat name="starts">1</stat>
+        <stat name="cardinality">1000</stat>
+       </stats>
+      </operation>
+      <operation id="3" parent_id="2" name="HASH JOIN" depth="3" position="1">
+       <optimizer>
+        <cardinality>1000</cardinality>
+        <bytes>38000</bytes>
+        <cost>109027</cost>
+        <cpu_cost>39887959257</cpu_cost>
+        <io_cost>107357</io_cost>
+        <time>5</time>
+       </optimizer>
+       <stats type="plan_monitor">
+        <stat name="first_active">02/14/2014 10:59:19</stat>
+        <stat name="last_active">02/14/2014 10:59:52</stat>
+        <stat name="duration">34</stat>
+        <stat name="from_most_recent">1</stat>
+        <stat name="from_sql_exec_start">2</stat>
+        <stat name="starts">1</stat>
+        <stat name="cardinality">1000</stat>
+        <stat name="max_memory">1299456</stat>
+       </stats>
+      </operation>
+      <operation id="4" parent_id="3" name="TABLE ACCESS" options="FULL" depth="4" position="1">
+       <object type="TABLE">
+        <owner>SOE</owner>
+        <name>PRODUCT_INFORMATION</name>
+       </object>
+       <optimizer>
+        <cardinality>1000</cardinality>
+        <bytes>8000</bytes>
+        <cost>9</cost>
+        <cpu_cost>409400</cpu_cost>
+        <io_cost>9</io_cost>
+        <time>1</time>
+       </optimizer>
+       <stats type="plan_monitor">
+        <stat name="first_active">02/14/2014 10:59:19</stat>
+        <stat name="last_active">02/14/2014 10:59:19</stat>
+        <stat name="duration">1</stat>
+        <stat name="from_most_recent">34</stat>
+        <stat name="from_sql_exec_start">2</stat>
+        <stat name="starts">1</stat>
+        <stat name="cardinality">1000</stat>
+       </stats>
+      </operation>
+      <operation id="5" parent_id="3" name="VIEW" depth="4" position="2">
+       <object type="VIEW">
+        <name>VW_GBC_9</name>
+       </object>
+       <optimizer>
+        <cardinality>1000</cardinality>
+        <bytes>30000</bytes>
+        <cost>109017</cost>
+        <cpu_cost>39875353856</cpu_cost>
+        <io_cost>107348</io_cost>
+        <time>5</time>
+       </optimizer>
+       <stats type="plan_monitor">
+        <stat name="first_active">02/14/2014 10:59:52</stat>
+        <stat name="last_active">02/14/2014 10:59:52</stat>
+        <stat name="duration">1</stat>
+        <stat name="from_most_recent">1</stat>
+        <stat name="from_sql_exec_start">35</stat>
+        <stat name="starts">1</stat>
+        <stat name="cardinality">1000</stat>
+       </stats>
+      </operation>
+      <operation id="6" parent_id="5" name="HASH" options="GROUP BY" depth="5" position="1">
+       <optimizer>
+        <cardinality>1000</cardinality>
+        <bytes>26000</bytes>
+        <cost>109017</cost>
+        <cpu_cost>39875353856</cpu_cost>
+        <io_cost>107348</io_cost>
+        <time>5</time>
+       </optimizer>
+       <stats type="plan_monitor">
+        <stat name="first_active">02/14/2014 10:59:37</stat>
+        <stat name="last_active">02/14/2014 10:59:52</stat>
+        <stat name="duration">16</stat>
+        <stat name="from_most_recent">1</stat>
+        <stat name="from_sql_exec_start">20</stat>
+        <stat name="starts">1</stat>
+        <stat name="cardinality">1000</stat>
+        <stat name="max_memory">2719744</stat>
+       </stats>
+       <activity_sampled start_time="02/14/2014 10:59:37" end_time="02/14/2014 10:59:51" duration="15" count="7" wait_count="0" cpu_count="7" other_sql_count="0" cpu_cores="8" hyperthread="N">
+        <activity class="Cpu">7</activity>
+       </activity_sampled>
+      </operation>
+      <operation id="7" parent_id="6" name="HASH JOIN" depth="6" position="1">
+       <optimizer>
+        <cardinality>18191502</cardinality>
+        <bytes>472979052</bytes>
+        <cost>108189</cost>
+        <cpu_cost>20085117293</cpu_cost>
+        <io_cost>107348</io_cost>
+        <temp>126428000</temp>
+        <time>5</time>
+       </optimizer>
+       <stats type="plan_monitor">
+        <stat name="first_active">02/14/2014 10:59:19</stat>
+        <stat name="last_active">02/14/2014 10:59:52</stat>
+        <stat name="duration">34</stat>
+        <stat name="from_most_recent">1</stat>
+        <stat name="from_sql_exec_start">2</stat>
+        <stat name="starts">1</stat>
+        <stat name="cardinality">18380486</stat>
+        <stat name="max_memory">14726144</stat>
+        <stat name="max_temp">987758592</stat>
+        <stat name="spill_count">1</stat>
+        <stat name="read_reqs">3767</stat>
+        <stat name="read_bytes">956637184</stat>
+        <stat name="write_reqs">3767</stat>
+        <stat name="write_bytes">956637184</stat>
+       </stats>
+       <activity_sampled start_time="02/14/2014 10:59:22" end_time="02/14/2014 10:59:52" duration="31" count="16" wait_count="1" cpu_count="15" other_sql_count="0" cpu_cores="8" hyperthread="N">
+        <activity class="Cpu">15</activity>
+        <activity class="User I/O" event="direct path read temp">1</activity>
+       </activity_sampled>
+      </operation>
+      <operation id="8" parent_id="7" name="TABLE ACCESS" options="FULL" depth="7" position="1">
+       <object type="TABLE">
+        <owner>SOE</owner>
+        <name>ORDERS</name>
+       </object>
+       <optimizer>
+        <cardinality>6020276</cardinality>
+        <bytes>54182484</bytes>
+        <cost>23642</cost>
+        <cpu_cost>3941228543</cpu_cost>
+        <io_cost>23477</io_cost>
+        <time>1</time>
+       </optimizer>
+       <stats type="plan_monitor">
+        <stat name="first_active">02/14/2014 10:59:18</stat>
+        <stat name="first_row">02/14/2014 10:59:19</stat>
+        <stat name="last_active">02/14/2014 10:59:25</stat>
+        <stat name="duration">8</stat>
+        <stat name="from_most_recent">28</stat>
+        <stat name="from_sql_exec_start">1</stat>
+        <stat name="starts">1</stat>
+        <stat name="cardinality">6155743</stat>
+        <stat name="read_reqs">1357</stat>
+        <stat name="read_bytes">704217088</stat>
+       </stats>
+       <activity_sampled start_time="02/14/2014 10:59:18" end_time="02/14/2014 10:59:23" duration="6" count="5" wait_count="2" cpu_count="3" other_sql_count="0" cpu_cores="8" hyperthread="N">
+        <activity class="Cpu">3</activity>
+        <activity class="User I/O" event="direct path read">2</activity>
+       </activity_sampled>
+      </operation>
+      <operation id="9" parent_id="7" name="TABLE ACCESS" options="FULL" depth="7" position="2">
+       <object type="TABLE">
+        <owner>SOE</owner>
+        <name>ORDER_ITEMS</name>
+       </object>
+       <optimizer>
+        <cardinality>32111883</cardinality>
+        <bytes>545902011</bytes>
+        <cost>34238</cost>
+        <cpu_cost>8276853120</cpu_cost>
+        <io_cost>33892</io_cost>
+        <time>2</time>
+       </optimizer>
+       <stats type="plan_monitor">
+        <stat name="first_active">02/14/2014 10:59:24</stat>
+        <stat name="first_row">02/14/2014 10:59:25</stat>
+        <stat name="last_active">02/14/2014 10:59:37</stat>
+        <stat name="duration">14</stat>
+        <stat name="from_most_recent">16</stat>
+        <stat name="from_sql_exec_start">7</stat>
+        <stat name="starts">1</stat>
+        <stat name="cardinality">32440513</stat>
+        <stat name="read_reqs">1876</stat>
+        <stat name="read_bytes">973709312</stat>
+       </stats>
+       <activity_sampled start_time="02/14/2014 10:59:24" end_time="02/14/2014 10:59:35" duration="12" count="7" wait_count="6" cpu_count="1" other_sql_count="0" cpu_cores="8" hyperthread="N">
+        <activity class="Cpu">1</activity>
+        <activity class="User I/O" event="direct path read">6</activity>
+       </activity_sampled>
+      </operation>
+      <operation id="10" parent_id="2" name="INDEX" options="UNIQUE SCAN" depth="3" position="2">
+       <object type="INDEX (UNIQUE)">
+        <owner>SOE</owner>
+        <name>PRD_DESC_PK</name>
+       </object>
+       <optimizer>
+        <cardinality>1</cardinality>
+        <bytes>7</bytes>
+        <cpu_cost>1900</cpu_cost>
+        <io_cost>0</io_cost>
+       </optimizer>
+       <stats type="plan_monitor">
+        <stat name="starts">1000</stat>
+       </stats>
+      </operation>
+     </plan_monitor>
+     <metrics bucket_interval="1" bucket_count="38" start_time="02/14/2014 10:59:17" end_time="02/14/2014 10:59:54" duration="38" cpu_cores="8" hyperthread="N">
+      <bucket number="1">
+       <val l="nb_cpu">.42</val>
+       <val l="reads">266</val>
+       <val l="writes">13</val>
+       <val l="read_kb">134475</val>
+       <val l="write_kb">3201</val>
+       <val l="interc_kb">137677</val>
+       <val l="pga_kb">27480</val>
+       <val l="tmp_kb">13312</val>
+      </bucket>
+      <bucket number="2">
+       <val l="nb_cpu">.43</val>
+       <val l="reads">226</val>
+       <val l="writes">41</val>
+       <val l="read_kb">114633</val>
+       <val l="write_kb">10164</val>
+       <val l="interc_kb">124797</val>
+       <val l="pga_kb">27494</val>
+       <val l="tmp_kb">24517</val>
+      </bucket>
+      <bucket number="3">
+       <val l="nb_cpu">.36</val>
+       <val l="reads">218</val>
+       <val l="writes">46</val>
+       <val l="read_kb">110877</val>
+       <val l="write_kb">11360</val>
+       <val l="interc_kb">122238</val>
+       <val l="pga_kb">27503</val>
+       <val l="tmp_kb">37423</val>
+      </bucket>
+      <bucket number="4">
+       <val l="nb_cpu">.36</val>
+       <val l="reads">217</val>
+       <val l="writes">57</val>
+       <val l="read_kb">109861</val>
+       <val l="write_kb">14145</val>
+       <val l="interc_kb">124007</val>
+       <val l="pga_kb">27510</val>
+       <val l="tmp_kb">52213</val>
+      </bucket>
+      <bucket number="5">
+       <val l="nb_cpu">.37</val>
+       <val l="reads">218</val>
+       <val l="writes">64</val>
+       <val l="read_kb">110269</val>
+       <val l="write_kb">15869</val>
+       <val l="interc_kb">126138</val>
+       <val l="pga_kb">27493</val>
+       <val l="tmp_kb">68568</val>
+      </bucket>
+      <bucket number="6">
+       <val l="nb_cpu">.37</val>
+       <val l="reads">223</val>
+       <val l="writes">42</val>
+       <val l="read_kb">113501</val>
+       <val l="write_kb">10452</val>
+       <val l="interc_kb">123953</val>
+       <val l="pga_kb">27509</val>
+       <val l="tmp_kb">79408</val>
+      </bucket>
+      <bucket number="7">
+       <val l="nb_cpu">.43</val>
+       <val l="reads">196</val>
+       <val l="writes">152</val>
+       <val l="read_kb">99015</val>
+       <val l="write_kb">37596</val>
+       <val l="interc_kb">136611</val>
+       <val l="pga_kb">27909</val>
+       <val l="tmp_kb">114954</val>
+      </bucket>
+      <bucket number="8">
+       <val l="nb_cpu">.45</val>
+       <val l="reads">139</val>
+       <val l="writes">214</val>
+       <val l="read_kb">70368</val>
+       <val l="write_kb">53014</val>
+       <val l="interc_kb">123382</val>
+       <val l="pga_kb">28063</val>
+       <val l="tmp_kb">169963</val>
+      </bucket>
+      <bucket number="9">
+       <val l="nb_cpu">.54</val>
+       <val l="reads">131</val>
+       <val l="writes">242</val>
+       <val l="read_kb">66540</val>
+       <val l="write_kb">60137</val>
+       <val l="interc_kb">126678</val>
+       <val l="pga_kb">28192</val>
+       <val l="tmp_kb">232274</val>
+      </bucket>
+      <bucket number="10">
+       <val l="nb_cpu">.58</val>
+       <val l="reads">152</val>
+       <val l="writes">280</val>
+       <val l="read_kb">76990</val>
+       <val l="write_kb">69487</val>
+       <val l="interc_kb">146477</val>
+       <val l="pga_kb">28651</val>
+       <val l="tmp_kb">307220</val>
+      </bucket>
+      <bucket number="11">
+       <val l="nb_cpu">.62</val>
+       <val l="reads">156</val>
+       <val l="writes">292</val>
+       <val l="read_kb">78951</val>
+       <val l="write_kb">72361</val>
+       <val l="interc_kb">151312</val>
+       <val l="pga_kb">28682</val>
+       <val l="tmp_kb">382798</val>
+      </bucket>
+      <bucket number="12">
+       <val l="nb_cpu">.63</val>
+       <val l="reads">158</val>
+       <val l="writes">299</val>
+       <val l="read_kb">80508</val>
+       <val l="write_kb">74074</val>
+       <val l="interc_kb">154581</val>
+       <val l="pga_kb">28667</val>
+       <val l="tmp_kb">459503</val>
+      </bucket>
+      <bucket number="13">
+       <val l="nb_cpu">.65</val>
+       <val l="reads">165</val>
+       <val l="writes">309</val>
+       <val l="read_kb">83556</val>
+       <val l="write_kb">76572</val>
+       <val l="interc_kb">160128</val>
+       <val l="pga_kb">28674</val>
+       <val l="tmp_kb">538928</val>
+      </bucket>
+      <bucket number="14">
+       <val l="nb_cpu">.66</val>
+       <val l="reads">173</val>
+       <val l="writes">322</val>
+       <val l="read_kb">87709</val>
+       <val l="write_kb">79893</val>
+       <val l="interc_kb">167602</val>
+       <val l="pga_kb">28686</val>
+       <val l="tmp_kb">621960</val>
+      </bucket>
+      <bucket number="15">
+       <val l="nb_cpu">.66</val>
+       <val l="reads">159</val>
+       <val l="writes">299</val>
+       <val l="read_kb">80713</val>
+       <val l="write_kb">74223</val>
+       <val l="interc_kb">154936</val>
+       <val l="pga_kb">28814</val>
+       <val l="tmp_kb">692729</val>
+      </bucket>
+      <bucket number="16">
+       <val l="nb_cpu">.66</val>
+       <val l="reads">173</val>
+       <val l="writes">329</val>
+       <val l="read_kb">87718</val>
+       <val l="write_kb">81596</val>
+       <val l="interc_kb">169314</val>
+       <val l="pga_kb">29255</val>
+       <val l="tmp_kb">782294</val>
+      </bucket>
+      <bucket number="17">
+       <val l="nb_cpu">.66</val>
+       <val l="reads">182</val>
+       <val l="writes">344</val>
+       <val l="read_kb">92824</val>
+       <val l="write_kb">85386</val>
+       <val l="interc_kb">178210</val>
+       <val l="pga_kb">29240</val>
+       <val l="tmp_kb">870390</val>
+      </bucket>
+      <bucket number="18">
+       <val l="nb_cpu">.66</val>
+       <val l="reads">190</val>
+       <val l="writes">298</val>
+       <val l="read_kb">95897</val>
+       <val l="write_kb">73799</val>
+       <val l="interc_kb">169696</val>
+       <val l="pga_kb">29248</val>
+       <val l="tmp_kb">946553</val>
+      </bucket>
+      <bucket number="19">
+       <val l="nb_cpu">.73</val>
+       <val l="reads">197</val>
+       <val l="writes">114</val>
+       <val l="read_kb">65869</val>
+       <val l="write_kb">28215</val>
+       <val l="interc_kb">94084</val>
+       <val l="pga_kb">25865</val>
+       <val l="tmp_kb">969065</val>
+      </bucket>
+      <bucket number="20">
+       <val l="nb_cpu">.76</val>
+       <val l="reads">214</val>
+       <val l="writes">11</val>
+       <val l="read_kb">53169</val>
+       <val l="write_kb">2673</val>
+       <val l="interc_kb">55842</val>
+       <val l="pga_kb">24189</val>
+       <val l="tmp_kb">970171</val>
+      </bucket>
+      <bucket number="21">
+       <val l="nb_cpu">.79</val>
+       <val l="reads">218</val>
+       <val l="read_kb">54149</val>
+       <val l="interc_kb">54149</val>
+       <val l="pga_kb">24188</val>
+       <val l="tmp_kb">970150</val>
+      </bucket>
+      <bucket number="22">
+       <val l="nb_cpu">.8</val>
+       <val l="reads">219</val>
+       <val l="read_kb">54294</val>
+       <val l="interc_kb">54294</val>
+       <val l="pga_kb">24168</val>
+       <val l="tmp_kb">969347</val>
+      </bucket>
+      <bucket number="23">
+       <val l="nb_cpu">.81</val>
+       <val l="reads">222</val>
+       <val l="read_kb">55060</val>
+       <val l="interc_kb">55060</val>
+       <val l="pga_kb">24176</val>
+       <val l="tmp_kb">969663</val>
+      </bucket>
+      <bucket number="24">
+       <val l="nb_cpu">.81</val>
+       <val l="reads">215</val>
+       <val l="read_kb">53324</val>
+       <val l="interc_kb">53324</val>
+       <val l="pga_kb">24167</val>
+       <val l="tmp_kb">969312</val>
+      </bucket>
+      <bucket number="25">
+       <val l="nb_cpu">.8</val>
+       <val l="reads">210</val>
+       <val l="read_kb">52146</val>
+       <val l="interc_kb">52146</val>
+       <val l="pga_kb">23948</val>
+       <val l="tmp_kb">960536</val>
+      </bucket>
+      <bucket number="26">
+       <val l="nb_cpu">.8</val>
+       <val l="reads">218</val>
+       <val l="read_kb">54125</val>
+       <val l="interc_kb">54125</val>
+       <val l="pga_kb">24196</val>
+       <val l="tmp_kb">970470</val>
+      </bucket>
+      <bucket number="27">
+       <val l="nb_cpu">.8</val>
+       <val l="reads">221</val>
+       <val l="read_kb">54812</val>
+       <val l="interc_kb">54812</val>
+       <val l="pga_kb">24202</val>
+       <val l="tmp_kb">970698</val>
+      </bucket>
+      <bucket number="28">
+       <val l="nb_cpu">.81</val>
+       <val l="reads">222</val>
+       <val l="read_kb">54962</val>
+       <val l="interc_kb">54962</val>
+       <val l="pga_kb">24191</val>
+       <val l="tmp_kb">970278</val>
+      </bucket>
+      <bucket number="29">
+       <val l="nb_cpu">.8</val>
+       <val l="reads">221</val>
+       <val l="read_kb">54726</val>
+       <val l="interc_kb">54726</val>
+       <val l="pga_kb">24183</val>
+       <val l="tmp_kb">969959</val>
+      </bucket>
+      <bucket number="30">
+       <val l="nb_cpu">.8</val>
+       <val l="reads">215</val>
+       <val l="read_kb">53438</val>
+       <val l="interc_kb">53438</val>
+       <val l="pga_kb">24020</val>
+       <val l="tmp_kb">963396</val>
+      </bucket>
+      <bucket number="31">
+       <val l="nb_cpu">.81</val>
+       <val l="reads">219</val>
+       <val l="read_kb">54310</val>
+       <val l="interc_kb">54310</val>
+       <val l="pga_kb">23406</val>
+       <val l="tmp_kb">970230</val>
+      </bucket>
+      <bucket number="32">
+       <val l="nb_cpu">.8</val>
+       <val l="reads">216</val>
+       <val l="read_kb">53517</val>
+       <val l="interc_kb">53517</val>
+       <val l="pga_kb">22955</val>
+       <val l="tmp_kb">969516</val>
+      </bucket>
+      <bucket number="33">
+       <val l="nb_cpu">.8</val>
+       <val l="reads">214</val>
+       <val l="read_kb">53140</val>
+       <val l="interc_kb">53140</val>
+       <val l="pga_kb">22952</val>
+       <val l="tmp_kb">969377</val>
+      </bucket>
+      <bucket number="34">
+       <val l="nb_cpu">.8</val>
+       <val l="reads">219</val>
+       <val l="read_kb">54431</val>
+       <val l="interc_kb">54431</val>
+       <val l="pga_kb">22946</val>
+       <val l="tmp_kb">969114</val>
+      </bucket>
+      <bucket number="35">
+       <val l="nb_cpu">.28</val>
+       <val l="reads">221</val>
+       <val l="read_kb">54744</val>
+       <val l="interc_kb">54744</val>
+       <val l="pga_kb">22954</val>
+       <val l="tmp_kb">969468</val>
+      </bucket>
+      <bucket number="36">
+       <val l="reads">78</val>
+       <val l="read_kb">19463</val>
+       <val l="interc_kb">19463</val>
+       <val l="pga_kb">8188</val>
+       <val l="tmp_kb">345827</val>
+      </bucket>
+     </metrics>
+    </sql_monitor_report>
+   </report>
+   <!--FXTMODEL-->
+  </script>
+  <script language="JavaScript" type="text/javascript" src="emviewers/scripts/loadswf.js">
+   <!--Load report viewer-->
+  </script>
+  <iframe name="_history" frameborder="0" scrolling="no" width="22" height="0">
+   <html>
+    <head>
+     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+     <script type="text/javascript" language="JavaScript1.2" charset="utf-8">
+                var v = new top.Vars(top.getSearch(window));
+                var fv = v.toString(&apos;$_&apos;);
+              </script>
+    </head>
+    <body>
+     <script type="text/javascript" language="JavaScript1.2" charset="utf-8" src="emviewers/scripts/document.js">
+      <!--Run document script-->
+     </script>
+    </body>
+   </html>
+  </iframe>
+ </body>
+</html>
+

@@ -1,0 +1,135 @@
+Trace file /u00/app/oracle/diag/rdbms/dbm11203/DBM11203/trace/DBM11203_ora_7978.trc
+Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, Automatic Storage Management, Oracle Label Security, OLAP,
+Data Mining and Real Application Testing options
+ORACLE_HOME = /u00/app/oracle/product/11.2.0.3
+System name:	Linux
+Node name:	helicon.antognini.ch
+Release:	2.6.9-42.ELsmp
+Version:	#1 SMP Tue Aug 15 10:35:26 BST 2006
+Machine:	x86_64
+Instance name: DBM11203
+Redo thread mounted by this instance: 1
+Oracle process number: 22
+Unix process pid: 7978, image: oracle@helicon.antognini.ch (TNS V1-V3)
+
+
+*** 2012-11-30 10:05:02.974
+*** SESSION ID:(190.17) 2012-11-30 10:05:02.974
+*** CLIENT ID:() 2012-11-30 10:05:02.974
+*** SERVICE NAME:(SYS$USERS) 2012-11-30 10:05:02.974
+*** MODULE NAME:(SQL*Plus) 2012-11-30 10:05:02.974
+*** ACTION NAME:() 2012-11-30 10:05:02.974
+ 
+=====================
+PARSING IN CURSOR #182925694280 len=47 dep=0 uid=34 oct=47 lid=34 tim=1354266302973866 hv=1680785647 ad='6fe669a8' sqlid='9arnynjk2xh7g'
+BEGIN dbms_session.session_trace_enable; END;
+END OF STMT
+EXEC #182925694280:c=0,e=773,p=0,cr=0,cu=0,mis=0,r=1,dep=0,og=1,plh=0,tim=1354266302973864
+WAIT #182925694280: nam='SQL*Net message to client' ela= 3 driver id=1650815232 #bytes=1 p3=0 obj#=-1 tim=1354266302974299
+
+*** 2012-11-30 10:05:05.524
+WAIT #182925694280: nam='SQL*Net message from client' ela= 2549782 driver id=1650815232 #bytes=1 p3=0 obj#=-1 tim=1354266305524102
+CLOSE #182925694280:c=0,e=35,dep=0,type=0,tim=1354266305524228
+=====================
+PARSING IN CURSOR #182925694280 len=1115 dep=0 uid=34 oct=47 lid=34 tim=1354266305530157 hv=1769310382 ad='710354f8' sqlid='9gr38rxnrb25f'
+DECLARE
+  l_dummy VARCHAR2(10);
+BEGIN
+  dbms_session.set_identifier(client_id => 'helicon.antognini.ch');
+  dbms_application_info.set_module(module_name => 'Module 1',
+                                   action_name => 'Action 11');
+  -- code module 1, action 11
+  SELECT 'Action 11' INTO l_dummy FROM dual;
+  dbms_application_info.set_module(module_name => 'Module 1',
+                                   action_name => 'Action 12');
+  -- code module 1, action 12
+  SELECT 'Action 12' INTO l_dummy FROM dual;
+  dbms_application_info.set_module(module_name => 'Module 1',
+                                   action_name => 'Action 13');
+  -- code module 1, action 13
+  SELECT 'Action 13' INTO l_dummy FROM dual;
+  dbms_application_info.set_module(module_name => 'Module 2',
+                                   action_name => 'Action 21');
+  -- code module 2, action 21
+  SELECT 'Action 21' INTO l_dummy FROM dual;
+  dbms_application_info.set_module(module_name => 'Module 2',
+                                   action_name => 'Action 22');
+  -- code module 2, action 22
+  SELECT 'Action 22' INTO l_dummy FROM dual;
+END;
+END OF STMT
+PARSE #182925694280:c=4999,e=5769,p=0,cr=0,cu=0,mis=1,r=0,dep=0,og=1,plh=0,tim=1354266305530155
+*** CLIENT ID:(helicon.antognini.ch) 2012-11-30 10:05:05.531
+*** MODULE NAME:(Module 1) 2012-11-30 10:05:05.531
+*** ACTION NAME:(Action 11) 2012-11-30 10:05:05.531
+ 
+=====================
+PARSING IN CURSOR #182925657936 len=28 dep=1 uid=34 oct=3 lid=34 tim=1354266305531814 hv=1765769517 ad='6fe66d70' sqlid='gx45gcjnmz09d'
+SELECT 'Action 11' FROM DUAL
+END OF STMT
+PARSE #182925657936:c=1000,e=1274,p=0,cr=0,cu=0,mis=1,r=0,dep=1,og=1,plh=1388734953,tim=1354266305531803
+EXEC #182925657936:c=0,e=66,p=0,cr=0,cu=0,mis=0,r=0,dep=1,og=1,plh=1388734953,tim=1354266305531968
+FETCH #182925657936:c=0,e=15,p=0,cr=0,cu=0,mis=0,r=1,dep=1,og=1,plh=1388734953,tim=1354266305532020
+STAT #182925657936 id=1 cnt=1 pid=0 pos=1 obj=0 op='FAST DUAL  (cr=0 pr=0 pw=0 time=3 us cost=2 size=0 card=1)'
+CLOSE #182925657936:c=0,e=2,dep=1,type=3,tim=1354266305532105
+*** MODULE NAME:(Module 1) 2012-11-30 10:05:05.532
+*** ACTION NAME:(Action 12) 2012-11-30 10:05:05.532
+ 
+=====================
+PARSING IN CURSOR #182926421024 len=28 dep=1 uid=34 oct=3 lid=34 tim=1354266305532610 hv=1573542001 ad='6fc5a7c0' sqlid='0u9gvstfwnq3j'
+SELECT 'Action 12' FROM DUAL
+END OF STMT
+PARSE #182926421024:c=1000,e=469,p=0,cr=0,cu=0,mis=1,r=0,dep=1,og=1,plh=1388734953,tim=1354266305532609
+EXEC #182926421024:c=0,e=19,p=0,cr=0,cu=0,mis=0,r=0,dep=1,og=1,plh=1388734953,tim=1354266305532737
+FETCH #182926421024:c=0,e=8,p=0,cr=0,cu=0,mis=0,r=1,dep=1,og=1,plh=1388734953,tim=1354266305532766
+STAT #182926421024 id=1 cnt=1 pid=0 pos=1 obj=0 op='FAST DUAL  (cr=0 pr=0 pw=0 time=2 us cost=2 size=0 card=1)'
+CLOSE #182926421024:c=0,e=1,dep=1,type=3,tim=1354266305532809
+*** MODULE NAME:(Module 1) 2012-11-30 10:05:05.533
+*** ACTION NAME:(Action 13) 2012-11-30 10:05:05.533
+ 
+=====================
+PARSING IN CURSOR #182926415856 len=28 dep=1 uid=34 oct=3 lid=34 tim=1354266305533249 hv=1824780156 ad='6fc5a5a0' sqlid='01t1zxdqc7vvw'
+SELECT 'Action 13' FROM DUAL
+END OF STMT
+PARSE #182926415856:c=0,e=410,p=0,cr=0,cu=0,mis=1,r=0,dep=1,og=1,plh=1388734953,tim=1354266305533247
+EXEC #182926415856:c=0,e=10,p=0,cr=0,cu=0,mis=0,r=0,dep=1,og=1,plh=1388734953,tim=1354266305533309
+FETCH #182926415856:c=0,e=14,p=0,cr=0,cu=0,mis=0,r=1,dep=1,og=1,plh=1388734953,tim=1354266305533344
+STAT #182926415856 id=1 cnt=1 pid=0 pos=1 obj=0 op='FAST DUAL  (cr=0 pr=0 pw=0 time=2 us cost=2 size=0 card=1)'
+CLOSE #182926415856:c=0,e=1,dep=1,type=3,tim=1354266305533389
+*** MODULE NAME:(Module 2) 2012-11-30 10:05:05.533
+*** ACTION NAME:(Action 21) 2012-11-30 10:05:05.533
+ 
+=====================
+PARSING IN CURSOR #182926413792 len=28 dep=1 uid=34 oct=3 lid=34 tim=1354266305533876 hv=3172655722 ad='6fc5a380' sqlid='4j17yjkyjpsma'
+SELECT 'Action 21' FROM DUAL
+END OF STMT
+PARSE #182926413792:c=0,e=458,p=0,cr=0,cu=0,mis=1,r=0,dep=1,og=1,plh=1388734953,tim=1354266305533875
+EXEC #182926413792:c=0,e=17,p=0,cr=0,cu=0,mis=0,r=0,dep=1,og=1,plh=1388734953,tim=1354266305533955
+FETCH #182926413792:c=0,e=7,p=0,cr=0,cu=0,mis=0,r=1,dep=1,og=1,plh=1388734953,tim=1354266305533983
+STAT #182926413792 id=1 cnt=1 pid=0 pos=1 obj=0 op='FAST DUAL  (cr=0 pr=0 pw=0 time=1 us cost=2 size=0 card=1)'
+CLOSE #182926413792:c=0,e=2,dep=1,type=3,tim=1354266305534026
+*** MODULE NAME:(Module 2) 2012-11-30 10:05:05.534
+*** ACTION NAME:(Action 22) 2012-11-30 10:05:05.534
+ 
+=====================
+PARSING IN CURSOR #182926408624 len=28 dep=1 uid=34 oct=3 lid=34 tim=1354266305534435 hv=238442838 ad='6fe6ec08' sqlid='3x10xhs73cqaq'
+SELECT 'Action 22' FROM DUAL
+END OF STMT
+PARSE #182926408624:c=1000,e=382,p=0,cr=0,cu=0,mis=1,r=0,dep=1,og=1,plh=1388734953,tim=1354266305534434
+EXEC #182926408624:c=0,e=16,p=0,cr=0,cu=0,mis=0,r=0,dep=1,og=1,plh=1388734953,tim=1354266305534501
+FETCH #182926408624:c=0,e=7,p=0,cr=0,cu=0,mis=0,r=1,dep=1,og=1,plh=1388734953,tim=1354266305534528
+STAT #182926408624 id=1 cnt=1 pid=0 pos=1 obj=0 op='FAST DUAL  (cr=0 pr=0 pw=0 time=1 us cost=2 size=0 card=1)'
+CLOSE #182926408624:c=0,e=2,dep=1,type=3,tim=1354266305534589
+EXEC #182925694280:c=5000,e=4283,p=0,cr=0,cu=0,mis=0,r=1,dep=0,og=1,plh=0,tim=1354266305534611
+WAIT #182925694280: nam='SQL*Net message to client' ela= 4 driver id=1650815232 #bytes=1 p3=0 obj#=-1 tim=1354266305534662
+
+*** 2012-11-30 10:05:15.634
+WAIT #182925694280: nam='SQL*Net message from client' ela= 10099569 driver id=1650815232 #bytes=1 p3=0 obj#=-1 tim=1354266315634255
+CLOSE #182925694280:c=0,e=54,dep=0,type=0,tim=1354266315634422
+=====================
+PARSING IN CURSOR #182925694280 len=48 dep=0 uid=34 oct=47 lid=34 tim=1354266315636072 hv=2223273708 ad='6fffd7b0' sqlid='4pzfk82288xrc'
+BEGIN dbms_session.session_trace_disable; END;
+END OF STMT
+PARSE #182925694280:c=1000,e=1576,p=0,cr=0,cu=0,mis=1,r=0,dep=0,og=1,plh=0,tim=1354266315636071
+EXEC #182925694280:c=1000,e=423,p=0,cr=0,cu=0,mis=0,r=1,dep=0,og=1,plh=0,tim=1354266315636560

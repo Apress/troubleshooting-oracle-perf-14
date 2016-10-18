@@ -1,0 +1,1005 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <base href="http://download.oracle.com/otn_software/"/>
+  <script language="javascript" type="text/javascript" src="emviewers/scripts/flashver.js">
+   <!--Test flash version-->
+  </script>
+  <style>
+      body { margin: 0px; overflow:hidden }
+    </style>
+ </head>
+ <body scroll="no">
+  <script type="text/xml">
+   <!--FXTMODEL-->
+   <report db_version="11.2.0.3.0" elapsed_time="0.80" cpu_time="0.47">
+    <report_id><![CDATA[/orarep/sql_detail/main?bucket_max_count=128&data_source=auto&event_detail=yes&report_level=typical&sql_id=c13sma6rkr27c&start_time=02:13:2014 23:40:00&top_n=10]]></report_id>
+    <report_parameters>
+     <sql_id>c13sma6rkr27c</sql_id>
+     <start_time>02/13/2014 23:40:00</start_time>
+     <event_detail>yes</event_detail>
+     <bucket_max_count>128</bucket_max_count>
+     <top_n>10</top_n>
+     <report_level>typical</report_level>
+     <data_source>auto</data_source>
+    </report_parameters>
+    <target sql_id="c13sma6rkr27c" start_time="02/13/2014 23:40:00" end_time="02/13/2014 23:56:41" start_time_stats="02/13/2014 23:40:00" end_time_stats="02/13/2014 23:56:41" inst_id="all" dbid="2532911053" database_role="PRIMARY"/>
+    <sql_details>
+     <sql_attributes>
+      <sql_id>c13sma6rkr27c</sql_id>
+      <force_matching_signature>18298161888330075667</force_matching_signature>
+      <exact_matching_signature>18298161888330075667</exact_matching_signature>
+      <text type="full">SELECT PRODUCTS.PRODUCT_ID, PRODUCT_NAME, PRODUCT_DESCRIPTION, CATEGORY_ID, WEIGHT_CLASS, WARRANTY_PERIOD, SUPPLIER_ID, PRODUCT_STATUS, LIST_PRICE, MIN_PRICE, CATALOG_URL, QUANTITY_ON_HAND FROM PRODUCTS, INVENTORIES WHERE PRODUCTS.CATEGORY_ID = :B3 AND INVENTORIES.PRODUCT_ID = PRODUCTS.PRODUCT_ID AND INVENTORIES.WAREHOUSE_ID = :B2 AND ROWNUM &lt; :B1 </text>
+     </sql_attributes>
+     <activity_histogram source="memory" bucket_interval="8" bucket_count="128" start_time="02/13/2014 23:40:00" end_time="02/13/2014 23:56:41" duration="1001" total_activity="971" sql_activity="224">
+      <bucket number="1">
+       <activity other_activity="other">7</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file parallel read">1</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">1</activity>
+      </bucket>
+      <bucket number="2">
+       <activity other_activity="other">5</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">1</activity>
+      </bucket>
+      <bucket number="3">
+       <activity other_activity="other">6</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">2</activity>
+       <activity plan_hash_value="2583456710" class="CPU">1</activity>
+      </bucket>
+      <bucket number="4">
+       <activity other_activity="other">5</activity>
+      </bucket>
+      <bucket number="5">
+       <activity other_activity="other">13</activity>
+      </bucket>
+      <bucket number="6">
+       <activity other_activity="other">4</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file parallel read">1</activity>
+      </bucket>
+      <bucket number="7">
+       <activity other_activity="other">3</activity>
+       <activity plan_hash_value="2583456710" class="CPU">1</activity>
+      </bucket>
+      <bucket number="8">
+       <activity other_activity="other">6</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">4</activity>
+      </bucket>
+      <bucket number="9">
+       <activity other_activity="other">6</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">2</activity>
+      </bucket>
+      <bucket number="10">
+       <activity other_activity="other">7</activity>
+      </bucket>
+      <bucket number="11">
+       <activity other_activity="other">3</activity>
+      </bucket>
+      <bucket number="12">
+       <activity other_activity="other">6</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file parallel read">1</activity>
+      </bucket>
+      <bucket number="13">
+       <activity other_activity="other">7</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">1</activity>
+      </bucket>
+      <bucket number="14">
+       <activity other_activity="other">7</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">2</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file parallel read">1</activity>
+      </bucket>
+      <bucket number="15">
+       <activity other_activity="other">5</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">2</activity>
+      </bucket>
+      <bucket number="16">
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">3</activity>
+       <activity other_activity="other">3</activity>
+      </bucket>
+      <bucket number="17">
+       <activity other_activity="other">10</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">3</activity>
+       <activity plan_hash_value="2583456710" class="CPU">1</activity>
+      </bucket>
+      <bucket number="18">
+       <activity other_activity="other">9</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">2</activity>
+      </bucket>
+      <bucket number="19">
+       <activity other_activity="other">3</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">2</activity>
+       <activity plan_hash_value="2583456710" class="CPU">1</activity>
+      </bucket>
+      <bucket number="20">
+       <activity other_activity="other">6</activity>
+      </bucket>
+      <bucket number="21">
+       <activity other_activity="other">2</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file parallel read">1</activity>
+      </bucket>
+      <bucket number="22">
+       <activity other_activity="other">9</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">3</activity>
+      </bucket>
+      <bucket number="23">
+       <activity other_activity="other">7</activity>
+      </bucket>
+      <bucket number="24">
+       <activity other_activity="other">7</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">1</activity>
+      </bucket>
+      <bucket number="25">
+       <activity other_activity="other">6</activity>
+      </bucket>
+      <bucket number="26">
+       <activity other_activity="other">5</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">2</activity>
+      </bucket>
+      <bucket number="27">
+       <activity other_activity="other">5</activity>
+      </bucket>
+      <bucket number="28">
+       <activity other_activity="other">7</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file parallel read">2</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">2</activity>
+      </bucket>
+      <bucket number="29">
+       <activity other_activity="other">4</activity>
+      </bucket>
+      <bucket number="30">
+       <activity other_activity="other">4</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">3</activity>
+      </bucket>
+      <bucket number="31">
+       <activity other_activity="other">9</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">3</activity>
+      </bucket>
+      <bucket number="32">
+       <activity other_activity="other">6</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">2</activity>
+      </bucket>
+      <bucket number="33">
+       <activity other_activity="other">6</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">1</activity>
+      </bucket>
+      <bucket number="34">
+       <activity other_activity="other">6</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">2</activity>
+       <activity plan_hash_value="2583456710" class="CPU">1</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file parallel read">1</activity>
+      </bucket>
+      <bucket number="35">
+       <activity other_activity="other">7</activity>
+       <activity plan_hash_value="2583456710" class="CPU">1</activity>
+      </bucket>
+      <bucket number="36">
+       <activity other_activity="other">11</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file parallel read">1</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">1</activity>
+      </bucket>
+      <bucket number="37">
+       <activity other_activity="other">2</activity>
+      </bucket>
+      <bucket number="38">
+       <activity other_activity="other">6</activity>
+       <activity plan_hash_value="2583456710" class="CPU">1</activity>
+      </bucket>
+      <bucket number="39">
+       <activity other_activity="other">2</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file parallel read">1</activity>
+      </bucket>
+      <bucket number="40">
+       <activity other_activity="other">6</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">1</activity>
+      </bucket>
+      <bucket number="41">
+       <activity other_activity="other">7</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">4</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file parallel read">1</activity>
+      </bucket>
+      <bucket number="42">
+       <activity other_activity="other">6</activity>
+      </bucket>
+      <bucket number="43">
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">3</activity>
+       <activity other_activity="other">3</activity>
+       <activity plan_hash_value="2583456710" class="CPU">1</activity>
+      </bucket>
+      <bucket number="44">
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">3</activity>
+       <activity other_activity="other">3</activity>
+      </bucket>
+      <bucket number="45">
+       <activity other_activity="other">9</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">2</activity>
+       <activity plan_hash_value="2583456710" class="CPU">1</activity>
+      </bucket>
+      <bucket number="46">
+       <activity other_activity="other">6</activity>
+      </bucket>
+      <bucket number="47">
+       <activity other_activity="other">7</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">1</activity>
+      </bucket>
+      <bucket number="48">
+       <activity other_activity="other">10</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">1</activity>
+      </bucket>
+      <bucket number="49">
+       <activity other_activity="other">14</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">1</activity>
+      </bucket>
+      <bucket number="50">
+       <activity other_activity="other">8</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">1</activity>
+      </bucket>
+      <bucket number="51">
+       <activity other_activity="other">5</activity>
+      </bucket>
+      <bucket number="52">
+       <activity other_activity="other">5</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">2</activity>
+       <activity plan_hash_value="2583456710" class="CPU">1</activity>
+      </bucket>
+      <bucket number="53">
+       <activity other_activity="other">6</activity>
+       <activity plan_hash_value="2583456710" class="CPU">1</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">1</activity>
+      </bucket>
+      <bucket number="54">
+       <activity other_activity="other">6</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">3</activity>
+      </bucket>
+      <bucket number="55">
+       <activity other_activity="other">5</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">1</activity>
+      </bucket>
+      <bucket number="56">
+       <activity other_activity="other">3</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">2</activity>
+      </bucket>
+      <bucket number="57">
+       <activity other_activity="other">10</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">3</activity>
+      </bucket>
+      <bucket number="58">
+       <activity other_activity="other">3</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">1</activity>
+      </bucket>
+      <bucket number="59">
+       <activity other_activity="other">10</activity>
+       <activity plan_hash_value="2583456710" class="CPU">2</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file parallel read">1</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">1</activity>
+      </bucket>
+      <bucket number="60">
+       <activity other_activity="other">10</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">1</activity>
+      </bucket>
+      <bucket number="61">
+       <activity other_activity="other">7</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file parallel read">1</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">1</activity>
+      </bucket>
+      <bucket number="62">
+       <activity other_activity="other">3</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">2</activity>
+      </bucket>
+      <bucket number="63">
+       <activity other_activity="other">5</activity>
+       <activity plan_hash_value="2583456710" class="CPU">2</activity>
+      </bucket>
+      <bucket number="64">
+       <activity other_activity="other">4</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">1</activity>
+      </bucket>
+      <bucket number="65">
+       <activity other_activity="other">10</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file parallel read">1</activity>
+      </bucket>
+      <bucket number="66">
+       <activity other_activity="other">10</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">3</activity>
+      </bucket>
+      <bucket number="67">
+       <activity other_activity="other">6</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">1</activity>
+      </bucket>
+      <bucket number="68">
+       <activity other_activity="other">7</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">3</activity>
+      </bucket>
+      <bucket number="69">
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">2</activity>
+       <activity other_activity="other">2</activity>
+       <activity plan_hash_value="2583456710" class="CPU">1</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file parallel read">1</activity>
+      </bucket>
+      <bucket number="70">
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">3</activity>
+       <activity other_activity="other">3</activity>
+      </bucket>
+      <bucket number="71">
+       <activity other_activity="other">8</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file parallel read">1</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">1</activity>
+      </bucket>
+      <bucket number="72">
+       <activity other_activity="other">4</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">1</activity>
+      </bucket>
+      <bucket number="73">
+       <activity other_activity="other">6</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">1</activity>
+      </bucket>
+      <bucket number="74">
+       <activity other_activity="other">7</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">1</activity>
+      </bucket>
+      <bucket number="75">
+       <activity other_activity="other">5</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">1</activity>
+      </bucket>
+      <bucket number="76">
+       <activity other_activity="other">8</activity>
+       <activity plan_hash_value="2583456710" class="CPU">1</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">1</activity>
+      </bucket>
+      <bucket number="77">
+       <activity other_activity="other">5</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">1</activity>
+      </bucket>
+      <bucket number="78">
+       <activity other_activity="other">2</activity>
+      </bucket>
+      <bucket number="79">
+       <activity other_activity="other">6</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">3</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file parallel read">2</activity>
+      </bucket>
+      <bucket number="80">
+       <activity other_activity="other">7</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">4</activity>
+       <activity plan_hash_value="2583456710" class="CPU">1</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file parallel read">1</activity>
+      </bucket>
+      <bucket number="81">
+       <activity other_activity="other">6</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">4</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file parallel read">1</activity>
+      </bucket>
+      <bucket number="82">
+       <activity other_activity="other">3</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">1</activity>
+      </bucket>
+      <bucket number="83">
+       <activity other_activity="other">5</activity>
+      </bucket>
+      <bucket number="84">
+       <activity other_activity="other">4</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">2</activity>
+      </bucket>
+      <bucket number="85">
+       <activity other_activity="other">11</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">2</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file parallel read">1</activity>
+      </bucket>
+      <bucket number="86">
+       <activity other_activity="other">3</activity>
+      </bucket>
+      <bucket number="87">
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">4</activity>
+       <activity other_activity="other">3</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file parallel read">1</activity>
+      </bucket>
+      <bucket number="88">
+       <activity other_activity="other">5</activity>
+       <activity plan_hash_value="2583456710" class="CPU">1</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">1</activity>
+      </bucket>
+      <bucket number="89">
+       <activity other_activity="other">4</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">1</activity>
+      </bucket>
+      <bucket number="90">
+       <activity other_activity="other">6</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file parallel read">2</activity>
+      </bucket>
+      <bucket number="91">
+       <activity other_activity="other">6</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">1</activity>
+      </bucket>
+      <bucket number="92">
+       <activity other_activity="other">5</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">2</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file parallel read">1</activity>
+      </bucket>
+      <bucket number="93">
+       <activity other_activity="other">7</activity>
+      </bucket>
+      <bucket number="94">
+       <activity other_activity="other">4</activity>
+      </bucket>
+      <bucket number="95">
+       <activity other_activity="other">6</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">1</activity>
+      </bucket>
+      <bucket number="96">
+       <activity other_activity="other">4</activity>
+       <activity plan_hash_value="2583456710" class="CPU">1</activity>
+      </bucket>
+      <bucket number="97">
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">3</activity>
+       <activity other_activity="other">3</activity>
+      </bucket>
+      <bucket number="98">
+       <activity other_activity="other">9</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">2</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file parallel read">1</activity>
+      </bucket>
+      <bucket number="99">
+       <activity other_activity="other">6</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">2</activity>
+      </bucket>
+      <bucket number="100">
+       <activity other_activity="other">3</activity>
+      </bucket>
+      <bucket number="101">
+       <activity other_activity="other">11</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">1</activity>
+      </bucket>
+      <bucket number="102">
+       <activity other_activity="other">5</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">1</activity>
+      </bucket>
+      <bucket number="103">
+       <activity other_activity="other">6</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">2</activity>
+      </bucket>
+      <bucket number="104">
+       <activity other_activity="other">5</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file parallel read">2</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">1</activity>
+      </bucket>
+      <bucket number="105">
+       <activity other_activity="other">7</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">1</activity>
+      </bucket>
+      <bucket number="106">
+       <activity other_activity="other">10</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">3</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file parallel read">1</activity>
+      </bucket>
+      <bucket number="107">
+       <activity other_activity="other">8</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">2</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file parallel read">1</activity>
+      </bucket>
+      <bucket number="108">
+       <activity other_activity="other">5</activity>
+      </bucket>
+      <bucket number="109">
+       <activity other_activity="other">7</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">1</activity>
+      </bucket>
+      <bucket number="110">
+       <activity other_activity="other">5</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">2</activity>
+      </bucket>
+      <bucket number="111">
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">3</activity>
+       <activity other_activity="other">2</activity>
+      </bucket>
+      <bucket number="112">
+       <activity other_activity="other">12</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file parallel read">1</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">1</activity>
+      </bucket>
+      <bucket number="113">
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">3</activity>
+       <activity other_activity="other">2</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file parallel read">1</activity>
+      </bucket>
+      <bucket number="114">
+       <activity other_activity="other">6</activity>
+      </bucket>
+      <bucket number="115">
+       <activity other_activity="other">4</activity>
+       <activity plan_hash_value="2583456710" class="CPU">1</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">1</activity>
+      </bucket>
+      <bucket number="116">
+       <activity other_activity="other">4</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">2</activity>
+      </bucket>
+      <bucket number="117">
+       <activity other_activity="other">3</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">2</activity>
+      </bucket>
+      <bucket number="118">
+       <activity other_activity="other">2</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">1</activity>
+      </bucket>
+      <bucket number="119">
+       <activity other_activity="other">6</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file parallel read">2</activity>
+      </bucket>
+      <bucket number="120">
+       <activity other_activity="other">8</activity>
+      </bucket>
+      <bucket number="121">
+       <activity other_activity="other">10</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">2</activity>
+      </bucket>
+      <bucket number="122">
+       <activity other_activity="other">5</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file parallel read">1</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">1</activity>
+      </bucket>
+      <bucket number="123">
+       <activity other_activity="other">10</activity>
+      </bucket>
+      <bucket number="124">
+       <activity other_activity="other">6</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">3</activity>
+       <activity plan_hash_value="2583456710" class="CPU">1</activity>
+      </bucket>
+      <bucket number="125">
+       <activity other_activity="other">4</activity>
+       <activity plan_hash_value="2583456710" class="User I/O" event="db file sequential read">1</activity>
+      </bucket>
+      <bucket number="126">
+       <activity other_activity="other">2</activity>
+      </bucket>
+     </activity_histogram>
+     <top_activity>
+      <dim id="top_level_sql_id" members="1" count="224">
+       <top_members>
+        <member id="0w2qpuc6u2zsp" count="224"/>
+       </top_members>
+      </dim>
+      <dim id="sql_id,plan_hash_value" members="1" count="224">
+       <top_members>
+        <member id="c13sma6rkr27c,2583456710" count="224"/>
+       </top_members>
+      </dim>
+      <dim id="inst_id" members="1" count="224">
+       <top_members>
+        <member id="1" count="224"/>
+       </top_members>
+      </dim>
+      <dim id="class" members="2" count="224">
+       <top_members>
+        <member id="User I/O" count="202"/>
+        <member id="CPU" count="22"/>
+       </top_members>
+      </dim>
+      <dim id="class,event" members="3" count="224">
+       <top_members>
+        <member id="User I/O,db file sequential read" count="167"/>
+        <member id="User I/O,db file parallel read" count="35"/>
+        <member id="CPU" count="22"/>
+       </top_members>
+      </dim>
+      <dim id="program" members="1" count="224">
+       <top_members>
+        <member id="JDBC Thin Client" count="224"/>
+       </top_members>
+      </dim>
+      <dim id="module,action" members="1" count="224">
+       <top_members>
+        <member id="New Order,getProductDetailsByCategory" count="224"/>
+       </top_members>
+      </dim>
+      <dim id="client_id" members="1" count="224">
+       <top_members>
+        <member id="Swingbench" count="224"/>
+       </top_members>
+      </dim>
+      <dim id="inst_id,session_id,session_serial#" members="15" count="224">
+       <top_members>
+        <member id="1,99,5721" count="20"/>
+        <member id="1,226,21" count="19"/>
+        <member id="1,140,37" count="18"/>
+        <member id="1,166,28179" count="18"/>
+        <member id="1,7,213" count="17"/>
+        <member id="1,193,22129" count="16"/>
+        <member id="1,49,73" count="15"/>
+        <member id="1,198,223" count="15"/>
+        <member id="1,228,22417" count="15"/>
+        <member id="1,78,65" count="13"/>
+        <member id="1,165,15103" count="13"/>
+       </top_members>
+      </dim>
+      <dim id="service_hash,service_name" members="1" count="224">
+       <top_members>
+        <member id="3962996379,DBM11203.antognini.ch" count="224"/>
+       </top_members>
+      </dim>
+      <dim id="user_id,user_name" members="1" count="224">
+       <top_members>
+        <member id="46,SOE" count="224"/>
+       </top_members>
+      </dim>
+      <dim id="object_id,owner,object_name,object_type" members="1" count="218">
+       <top_members>
+        <member id="43491,SOE,INVENTORIES,TABLE" count="218"/>
+       </top_members>
+      </dim>
+      <dim id="owner,entry_object,entry_procedure" members="1" count="224">
+       <top_members>
+        <member id="SOE,ORDERENTRY,NEWORDER" count="224"/>
+       </top_members>
+      </dim>
+     </top_activity>
+     <plan_activities>
+      <activities plan_hash_value="2583456710">
+       <plan_activity count="224" wait_count="202" cpu_count="22">
+        <activity class="User I/O" event="db file sequential read">167</activity>
+        <activity class="User I/O" event="db file parallel read">35</activity>
+        <activity class="CPU">22</activity>
+       </plan_activity>
+       <plan_line_activity>
+        <operation name="SELECT STATEMENT" id="0" count="4" num_mems="1">
+         <activity class="CPU">4</activity>
+        </operation>
+        <operation name="HASH JOIN" options="OUTER" id="4" count="8" num_mems="1">
+         <activity class="CPU">8</activity>
+        </operation>
+        <operation name="TABLE ACCESS" options="BY INDEX ROWID" id="5" count="1" num_mems="1">
+         <activity class="CPU">1</activity>
+        </operation>
+        <operation name="INDEX" options="SKIP SCAN" id="8" count="5" num_mems="1">
+         <activity class="CPU">5</activity>
+        </operation>
+        <operation name="TABLE ACCESS" options="BY INDEX ROWID" id="10" count="206" num_mems="3">
+         <activity class="User I/O" event="db file sequential read">167</activity>
+         <activity class="User I/O" event="db file parallel read">35</activity>
+         <activity class="CPU">4</activity>
+        </operation>
+       </plan_line_activity>
+       <top_activity>
+        <dim id="inst_id,session_id,session_serial#" members="15" count="224">
+         <top_members>
+          <member id="1,99,5721" username="SOE" service_name="DBM11203.antognini.ch" program="JDBC Thin Client" count="20">
+           <activity class="User I/O" event="db file sequential read">15</activity>
+           <activity class="User I/O" event="db file parallel read">3</activity>
+           <activity class="CPU">2</activity>
+          </member>
+          <member id="1,226,21" username="SOE" service_name="DBM11203.antognini.ch" program="JDBC Thin Client" count="19">
+           <activity class="User I/O" event="db file sequential read">12</activity>
+           <activity class="User I/O" event="db file parallel read">4</activity>
+           <activity class="CPU">3</activity>
+          </member>
+          <member id="1,140,37" username="SOE" service_name="DBM11203.antognini.ch" program="JDBC Thin Client" count="18">
+           <activity class="User I/O" event="db file sequential read">14</activity>
+           <activity class="User I/O" event="db file parallel read">4</activity>
+          </member>
+          <member id="1,166,28179" username="SOE" service_name="DBM11203.antognini.ch" program="JDBC Thin Client" count="18">
+           <activity class="User I/O" event="db file sequential read">16</activity>
+           <activity class="CPU">2</activity>
+          </member>
+          <member id="1,7,213" username="SOE" service_name="DBM11203.antognini.ch" program="JDBC Thin Client" count="17">
+           <activity class="User I/O" event="db file sequential read">14</activity>
+           <activity class="CPU">2</activity>
+           <activity class="User I/O" event="db file parallel read">1</activity>
+          </member>
+          <member id="1,193,22129" username="SOE" service_name="DBM11203.antognini.ch" program="JDBC Thin Client" count="16">
+           <activity class="User I/O" event="db file sequential read">9</activity>
+           <activity class="User I/O" event="db file parallel read">5</activity>
+           <activity class="CPU">2</activity>
+          </member>
+          <member id="1,198,223" username="SOE" service_name="DBM11203.antognini.ch" program="JDBC Thin Client" count="15">
+           <activity class="User I/O" event="db file sequential read">11</activity>
+           <activity class="CPU">3</activity>
+           <activity class="User I/O" event="db file parallel read">1</activity>
+          </member>
+          <member id="1,228,22417" username="SOE" service_name="DBM11203.antognini.ch" program="JDBC Thin Client" count="15">
+           <activity class="User I/O" event="db file sequential read">12</activity>
+           <activity class="User I/O" event="db file parallel read">3</activity>
+          </member>
+          <member id="1,49,73" username="SOE" service_name="DBM11203.antognini.ch" program="JDBC Thin Client" count="15">
+           <activity class="User I/O" event="db file sequential read">10</activity>
+           <activity class="User I/O" event="db file parallel read">3</activity>
+           <activity class="CPU">2</activity>
+          </member>
+          <member id="1,165,15103" username="SOE" service_name="DBM11203.antognini.ch" program="JDBC Thin Client" count="13">
+           <activity class="User I/O" event="db file sequential read">10</activity>
+           <activity class="User I/O" event="db file parallel read">3</activity>
+          </member>
+          <member id="1,78,65" username="SOE" service_name="DBM11203.antognini.ch" program="JDBC Thin Client" count="13">
+           <activity class="User I/O" event="db file sequential read">11</activity>
+           <activity class="CPU">1</activity>
+           <activity class="User I/O" event="db file parallel read">1</activity>
+          </member>
+          <member id="1,142,43" username="SOE" service_name="DBM11203.antognini.ch" program="JDBC Thin Client" count="12">
+           <activity class="User I/O" event="db file sequential read">9</activity>
+           <activity class="User I/O" event="db file parallel read">2</activity>
+           <activity class="CPU">1</activity>
+          </member>
+          <member id="1,70,41775" username="SOE" service_name="DBM11203.antognini.ch" program="JDBC Thin Client" count="12">
+           <activity class="User I/O" event="db file sequential read">7</activity>
+           <activity class="User I/O" event="db file parallel read">3</activity>
+           <activity class="CPU">2</activity>
+          </member>
+          <member id="1,50,49101" username="SOE" service_name="DBM11203.antognini.ch" program="JDBC Thin Client" count="11">
+           <activity class="User I/O" event="db file sequential read">9</activity>
+           <activity class="User I/O" event="db file parallel read">2</activity>
+          </member>
+          <member id="1,98,4995" username="SOE" service_name="DBM11203.antognini.ch" program="JDBC Thin Client" count="10">
+           <activity class="User I/O" event="db file sequential read">8</activity>
+           <activity class="CPU">2</activity>
+          </member>
+         </top_members>
+        </dim>
+       </top_activity>
+      </activities>
+     </plan_activities>
+     <sql_plans>
+      <sql_plan plan_hash_value="2583456710">
+       <cursor_binds>
+        <binds source="memory" inst_id="1" child_address="000000007043DED8">
+         <bind name=":B3" pos="1" dtystr="NUMBER" maxlen="22">108</bind>
+         <bind name=":B2" pos="2" dtystr="NUMBER" maxlen="22">292</bind>
+         <bind name=":B1" pos="3" dtystr="NUMBER" maxlen="22">15</bind>
+        </binds>
+       </cursor_binds>
+       <info_group name="cursor_info" source="memory" info_inst_id="1">
+        <info name="parsing_schema_name">SOE</info>
+        <info name="optimizer_mode">ALL_ROWS</info>
+        <info name="optimizer_cost">25</info>
+        <info name="optimizer_env_hash_value">331099046</info>
+        <info name="module">New Order</info>
+        <info name="action">getProductDetailsByCategory</info>
+        <info name="last_active_time">02/13/2014 23:56:41</info>
+        <info name="first_load_time">02/13/2014 23:33:03</info>
+        <info name="last_load_time">02/13/2014 23:33:03</info>
+        <info name="duration">0</info>
+       </info_group>
+       <stats type="sql_plan_statistics" source="memory" instance_count="1" version_count="1">
+        <stat name="sharable_mem">48543</stat>
+        <stat name="persistent_mem">48432</stat>
+        <stat name="runtime_mem">46320</stat>
+        <stat name="typecheck_mem">0</stat>
+        <stat name="sorts">0</stat>
+        <stat name="loads">1</stat>
+        <stat name="invalidations">0</stat>
+        <stat name="executions">28414</stat>
+        <stat name="fetches">28414</stat>
+        <stat name="px_servers_executions">0</stat>
+        <stat name="end_of_fetch_count">28414</stat>
+        <stat name="parse_calls">15</stat>
+        <stat name="disk_reads">80541</stat>
+        <stat name="direct_writes">0</stat>
+        <stat name="buffer_gets">772581</stat>
+        <stat name="rows_processed">128804</stat>
+        <stat name="io_cell_offload_eligible_bytes">0</stat>
+        <stat name="io_interconnect_bytes">659791872</stat>
+        <stat name="physical_read_requests">80541</stat>
+        <stat name="physical_read_bytes">659791872</stat>
+        <stat name="physical_write_requests">0</stat>
+        <stat name="physical_write_bytes">0</stat>
+        <stat name="cpu_time">18.062235</stat>
+        <stat name="elapsed_time">324.63527</stat>
+        <stat name="application_wait_time">0</stat>
+        <stat name="concurrency_wait_time">.071718</stat>
+        <stat name="cluster_wait_time">0</stat>
+        <stat name="user_io_wait_time">294.971354</stat>
+        <stat name="plsql_exec_time">0</stat>
+        <stat name="java_exec_time">0</stat>
+       </stats>
+       <stats type="sql_plan_active_time" source="memory" duration="1418">
+        <stat name="sorts_ps">0</stat>
+        <stat name="loads_ps">.000705</stat>
+        <stat name="invalidations_ps">0</stat>
+        <stat name="executions_ps">20.038082</stat>
+        <stat name="fetches_ps">20.038082</stat>
+        <stat name="px_servers_executions_ps">0</stat>
+        <stat name="end_of_fetch_count_ps">20.038082</stat>
+        <stat name="parse_calls_ps">.010578</stat>
+        <stat name="disk_reads_ps">56.799013</stat>
+        <stat name="direct_writes_ps">0</stat>
+        <stat name="buffer_gets_ps">544.838505</stat>
+        <stat name="rows_processed_ps">90.834979</stat>
+        <stat name="io_cell_offload_eligible_bytes_ps">0</stat>
+        <stat name="io_interconnect_bytes_ps">465297.511989</stat>
+        <stat name="physical_read_requests_ps">56.799013</stat>
+        <stat name="physical_read_bytes_ps">465297.511989</stat>
+        <stat name="physical_write_requests_ps">0</stat>
+        <stat name="physical_write_bytes_ps">0</stat>
+        <stat name="cpu_time_ps">.012738</stat>
+        <stat name="elapsed_time_ps">.228939</stat>
+        <stat name="application_wait_time_ps">0</stat>
+        <stat name="concurrency_wait_time_ps">.000051</stat>
+        <stat name="cluster_wait_time_ps">0</stat>
+        <stat name="user_io_wait_time_ps">.208019</stat>
+        <stat name="plsql_exec_time_ps">0</stat>
+        <stat name="java_exec_time_ps">0</stat>
+       </stats>
+       <sql_plan_statistics_history delta_snap="1375">
+        <stats type="snapshot_interval" source="memory_disk" duration="3344" end_interval_time="02/13/2014 23:56:42">
+         <stat name="executions"/>
+         <stat name="fetches"/>
+         <stat name="px_servers_executions"/>
+         <stat name="end_of_fetch_count"/>
+         <stat name="parse_calls"/>
+         <stat name="disk_reads"/>
+         <stat name="direct_writes"/>
+         <stat name="buffer_gets"/>
+         <stat name="rows_processed"/>
+         <stat name="io_cell_offload_eligible_bytes"/>
+         <stat name="io_interconnect_bytes"/>
+         <stat name="physical_read_requests"/>
+         <stat name="physical_read_bytes"/>
+         <stat name="physical_write_requests"/>
+         <stat name="physical_write_bytes"/>
+         <stat name="cpu_time"/>
+         <stat name="elapsed_time"/>
+         <stat name="application_wait_time"/>
+         <stat name="concurrency_wait_time"/>
+         <stat name="cluster_wait_time"/>
+         <stat name="user_io_wait_time"/>
+         <stat name="plsql_exec_time"/>
+         <stat name="java_exec_time"/>
+        </stats>
+       </sql_plan_statistics_history>
+       <plan plan_source="memory" plan_inst_id="1" plan_child_address="000000007043DED8">
+        <operation name="SELECT STATEMENT" id="0" depth="0" pos="25">
+         <cost>25</cost>
+        </operation>
+        <operation name="COUNT" options="STOPKEY" id="1" depth="1" pos="1">
+         <project>&quot;I&quot;.&quot;PRODUCT_ID&quot;[NUMBER,22], &quot;I&quot;.&quot;CATALOG_URL&quot;[VARCHAR2,50], &quot;I&quot;.&quot;PRODUCT_NAME&quot;[VARCHAR2,50], &quot;I&quot;.&quot;PRODUCT_DESCRIPTION&quot;[VARCHAR2,2000], &quot;I&quot;.&quot;CATEGORY_ID&quot;[NUMBER,22], &quot;I&quot;.&quot;WEIGHT_CLASS&quot;[NUMBER,22], &quot;I&quot;.&quot;WARRANTY_PERIOD&quot;[INTERVAL YEAR TO MONTH,5], &quot;I&quot;.&quot;SUPPLIER_ID&quot;[NUMBER,22], &quot;I&quot;.&quot;PRODUCT_STATUS&quot;[VARCHAR2,20], &quot;I&quot;.&quot;LIST_PRICE&quot;[NUMBER,22], &quot;I&quot;.&quot;MIN_PRICE&quot;[NUMBER,22], &quot;D&quot;.&quot;TRANSLATED_DESCRIPTION&quot;[NVARCHAR2,4000], &quot;D&quot;.&quot;LANGUAGE_ID&quot;[VARCHAR2,3], &quot;D&quot;.&quot;TRANSLATED_NAME&quot;[NVARCHAR2,100], &quot;QUANTITY_ON_HAND&quot;[NUMBER,22]</project>
+         <predicates type="filter">ROWNUM&lt;:B1</predicates>
+         <qblock>SEL$F5BB74E1</qblock>
+         <other_xml>
+          <info type="db_version">11.2.0.3</info>
+          <info type="parse_schema"><![CDATA["SOE"]]></info>
+          <info type="plan_hash">2583456710</info>
+          <info type="plan_hash_2">4259697277</info>
+          <peeked_binds>
+           <bind nam=":B3" pos="1" dty="2" pre="0" scl="0" mxl="22">c123</bind>
+           <bind nam=":B2" pos="2" dty="2" pre="0" scl="0" mxl="22">c20949</bind>
+           <bind nam=":B1" pos="3" dty="2" pre="0" scl="0" mxl="22">c110</bind>
+          </peeked_binds>
+          <outline_data>
+           <hint><![CDATA[IGNORE_OPTIM_EMBEDDED_HINTS]]></hint>
+           <hint><![CDATA[OPTIMIZER_FEATURES_ENABLE('11.2.0.3')]]></hint>
+           <hint><![CDATA[DB_VERSION('11.2.0.3')]]></hint>
+           <hint><![CDATA[ALL_ROWS]]></hint>
+           <hint><![CDATA[OUTLINE_LEAF(@"SEL$F5BB74E1")]]></hint>
+           <hint><![CDATA[MERGE(@"SEL$2")]]></hint>
+           <hint><![CDATA[OUTLINE(@"SEL$1")]]></hint>
+           <hint><![CDATA[OUTLINE(@"SEL$2")]]></hint>
+           <hint><![CDATA[INDEX_RS_ASC(@"SEL$F5BB74E1" "I"@"SEL$2" ("PRODUCT_INFORMATION"."CATEGORY_ID"))]]></hint>
+           <hint><![CDATA[INDEX_SS(@"SEL$F5BB74E1" "D"@"SEL$2" ("PRODUCT_DESCRIPTIONS"."PRODUCT_ID" "PRODUCT_DESCRIPTIONS"."LANGUAGE_ID"))]]></hint>
+           <hint><![CDATA[INDEX(@"SEL$F5BB74E1" "INVENTORIES"@"SEL$1" ("INVENTORIES"."PRODUCT_ID" "INVENTORIES"."WAREHOUSE_ID"))]]></hint>
+           <hint><![CDATA[LEADING(@"SEL$F5BB74E1" "I"@"SEL$2" "D"@"SEL$2" "INVENTORIES"@"SEL$1")]]></hint>
+           <hint><![CDATA[USE_HASH(@"SEL$F5BB74E1" "D"@"SEL$2")]]></hint>
+           <hint><![CDATA[USE_NL(@"SEL$F5BB74E1" "INVENTORIES"@"SEL$1")]]></hint>
+           <hint><![CDATA[NLJ_BATCHING(@"SEL$F5BB74E1" "INVENTORIES"@"SEL$1")]]></hint>
+          </outline_data>
+         </other_xml>
+        </operation>
+        <operation name="NESTED LOOPS" id="2" depth="2" pos="1">
+         <project>&quot;I&quot;.&quot;PRODUCT_ID&quot;[NUMBER,22], &quot;I&quot;.&quot;CATALOG_URL&quot;[VARCHAR2,50], &quot;I&quot;.&quot;PRODUCT_NAME&quot;[VARCHAR2,50], &quot;I&quot;.&quot;PRODUCT_DESCRIPTION&quot;[VARCHAR2,2000], &quot;I&quot;.&quot;CATEGORY_ID&quot;[NUMBER,22], &quot;I&quot;.&quot;WEIGHT_CLASS&quot;[NUMBER,22], &quot;I&quot;.&quot;WARRANTY_PERIOD&quot;[INTERVAL YEAR TO MONTH,5], &quot;I&quot;.&quot;SUPPLIER_ID&quot;[NUMBER,22], &quot;I&quot;.&quot;PRODUCT_STATUS&quot;[VARCHAR2,20], &quot;I&quot;.&quot;LIST_PRICE&quot;[NUMBER,22], &quot;I&quot;.&quot;MIN_PRICE&quot;[NUMBER,22], &quot;D&quot;.&quot;TRANSLATED_DESCRIPTION&quot;[NVARCHAR2,4000], &quot;D&quot;.&quot;LANGUAGE_ID&quot;[VARCHAR2,3], &quot;D&quot;.&quot;TRANSLATED_NAME&quot;[NVARCHAR2,100], &quot;QUANTITY_ON_HAND&quot;[NUMBER,22]</project>
+        </operation>
+        <operation name="NESTED LOOPS" id="3" depth="3" pos="1">
+         <card>9</card>
+         <bytes>3654</bytes>
+         <cost>25</cost>
+         <io_cost>24</io_cost>
+         <cpu_cost>12135925</cpu_cost>
+         <time>00:00:01 </time>
+         <project>&quot;I&quot;.&quot;PRODUCT_ID&quot;[NUMBER,22], &quot;I&quot;.&quot;CATALOG_URL&quot;[VARCHAR2,50], &quot;I&quot;.&quot;PRODUCT_NAME&quot;[VARCHAR2,50], &quot;I&quot;.&quot;PRODUCT_DESCRIPTION&quot;[VARCHAR2,2000], &quot;I&quot;.&quot;CATEGORY_ID&quot;[NUMBER,22], &quot;I&quot;.&quot;WEIGHT_CLASS&quot;[NUMBER,22], &quot;I&quot;.&quot;WARRANTY_PERIOD&quot;[INTERVAL YEAR TO MONTH,5], &quot;I&quot;.&quot;SUPPLIER_ID&quot;[NUMBER,22], &quot;I&quot;.&quot;PRODUCT_STATUS&quot;[VARCHAR2,20], &quot;I&quot;.&quot;LIST_PRICE&quot;[NUMBER,22], &quot;I&quot;.&quot;MIN_PRICE&quot;[NUMBER,22], &quot;D&quot;.&quot;TRANSLATED_DESCRIPTION&quot;[NVARCHAR2,4000], &quot;D&quot;.&quot;LANGUAGE_ID&quot;[VARCHAR2,3], &quot;D&quot;.&quot;TRANSLATED_NAME&quot;[NVARCHAR2,100], &quot;INVENTORIES&quot;.ROWID[ROWID,10]</project>
+        </operation>
+        <operation name="HASH JOIN" options="OUTER" id="4" depth="4" pos="1">
+         <card>6</card>
+         <bytes>2352</bytes>
+         <cost>13</cost>
+         <io_cost>12</io_cost>
+         <cpu_cost>12037927</cpu_cost>
+         <time>00:00:01 </time>
+         <project>(#keys=1) &quot;I&quot;.&quot;PRODUCT_ID&quot;[NUMBER,22], &quot;I&quot;.&quot;CATALOG_URL&quot;[VARCHAR2,50], &quot;I&quot;.&quot;PRODUCT_NAME&quot;[VARCHAR2,50], &quot;I&quot;.&quot;PRODUCT_DESCRIPTION&quot;[VARCHAR2,2000], &quot;I&quot;.&quot;CATEGORY_ID&quot;[NUMBER,22], &quot;I&quot;.&quot;WEIGHT_CLASS&quot;[NUMBER,22], &quot;I&quot;.&quot;WARRANTY_PERIOD&quot;[INTERVAL YEAR TO MONTH,5], &quot;I&quot;.&quot;SUPPLIER_ID&quot;[NUMBER,22], &quot;I&quot;.&quot;PRODUCT_STATUS&quot;[VARCHAR2,20], &quot;I&quot;.&quot;LIST_PRICE&quot;[NUMBER,22], &quot;I&quot;.&quot;MIN_PRICE&quot;[NUMBER,22], &quot;D&quot;.&quot;TRANSLATED_DESCRIPTION&quot;[NVARCHAR2,4000], &quot;D&quot;.&quot;LANGUAGE_ID&quot;[VARCHAR2,3], &quot;D&quot;.&quot;TRANSLATED_NAME&quot;[NVARCHAR2,100]</project>
+         <predicates type="access">&quot;D&quot;.&quot;PRODUCT_ID&quot;=&quot;I&quot;.&quot;PRODUCT_ID&quot;</predicates>
+        </operation>
+        <operation name="TABLE ACCESS" options="BY INDEX ROWID" id="5" depth="5" pos="1">
+         <object>PRODUCT_INFORMATION</object>
+         <card>6</card>
+         <bytes>1056</bytes>
+         <cost>7</cost>
+         <io_cost>7</io_cost>
+         <cpu_cost>54000</cpu_cost>
+         <time>00:00:01 </time>
+         <project>&quot;I&quot;.&quot;PRODUCT_ID&quot;[NUMBER,22], &quot;I&quot;.&quot;PRODUCT_NAME&quot;[VARCHAR2,50], &quot;I&quot;.&quot;PRODUCT_DESCRIPTION&quot;[VARCHAR2,2000], &quot;I&quot;.&quot;CATEGORY_ID&quot;[NUMBER,22], &quot;I&quot;.&quot;WEIGHT_CLASS&quot;[NUMBER,22], &quot;I&quot;.&quot;WARRANTY_PERIOD&quot;[INTERVAL YEAR TO MONTH,5], &quot;I&quot;.&quot;SUPPLIER_ID&quot;[NUMBER,22], &quot;I&quot;.&quot;PRODUCT_STATUS&quot;[VARCHAR2,20], &quot;I&quot;.&quot;LIST_PRICE&quot;[NUMBER,22], &quot;I&quot;.&quot;MIN_PRICE&quot;[NUMBER,22], &quot;I&quot;.&quot;CATALOG_URL&quot;[VARCHAR2,50]</project>
+         <qblock>SEL$F5BB74E1</qblock>
+         <object_alias>I@SEL$2</object_alias>
+        </operation>
+        <operation name="INDEX" options="RANGE SCAN" id="6" depth="6" pos="1">
+         <object>PROD_CATEGORY_IX</object>
+         <card>6</card>
+         <cost>1</cost>
+         <io_cost>1</io_cost>
+         <cpu_cost>9171</cpu_cost>
+         <time>00:00:01 </time>
+         <project>&quot;I&quot;.ROWID[ROWID,10], &quot;I&quot;.&quot;CATEGORY_ID&quot;[NUMBER,22]</project>
+         <predicates type="access">&quot;I&quot;.&quot;CATEGORY_ID&quot;=:B3</predicates>
+         <qblock>SEL$F5BB74E1</qblock>
+         <object_alias>I@SEL$2</object_alias>
+        </operation>
+        <operation name="TABLE ACCESS" options="BY INDEX ROWID" id="7" depth="5" pos="2">
+         <object>PRODUCT_DESCRIPTIONS</object>
+         <card>2</card>
+         <bytes>432</bytes>
+         <cost>5</cost>
+         <io_cost>5</io_cost>
+         <cpu_cost>36427</cpu_cost>
+         <time>00:00:01 </time>
+         <project>&quot;D&quot;.&quot;PRODUCT_ID&quot;[NUMBER,22], &quot;D&quot;.&quot;LANGUAGE_ID&quot;[VARCHAR2,3], &quot;D&quot;.&quot;TRANSLATED_NAME&quot;[NVARCHAR2,100], &quot;D&quot;.&quot;TRANSLATED_DESCRIPTION&quot;[NVARCHAR2,4000]</project>
+         <qblock>SEL$F5BB74E1</qblock>
+         <object_alias>D@SEL$2</object_alias>
+        </operation>
+        <operation name="INDEX" options="SKIP SCAN" id="8" depth="6" pos="1">
+         <object>PRD_DESC_PK</object>
+         <card>2</card>
+         <cost>4</cost>
+         <io_cost>4</io_cost>
+         <cpu_cost>28886</cpu_cost>
+         <time>00:00:01 </time>
+         <project>&quot;D&quot;.ROWID[ROWID,10], &quot;D&quot;.&quot;PRODUCT_ID&quot;[NUMBER,22], &quot;D&quot;.&quot;LANGUAGE_ID&quot;[VARCHAR2,3]</project>
+         <predicates type="access">&quot;D&quot;.&quot;LANGUAGE_ID&quot;=SYS_CONTEXT(&apos;USERENV&apos;,&apos;LANG&apos;)</predicates>
+         <predicates type="filter">&quot;D&quot;.&quot;LANGUAGE_ID&quot;=SYS_CONTEXT(&apos;USERENV&apos;,&apos;LANG&apos;)</predicates>
+         <qblock>SEL$F5BB74E1</qblock>
+         <object_alias>D@SEL$2</object_alias>
+        </operation>
+        <operation name="INDEX" options="UNIQUE SCAN" id="9" depth="4" pos="2">
+         <object>INVENTORY_PK</object>
+         <card>1</card>
+         <cost>1</cost>
+         <io_cost>1</io_cost>
+         <cpu_cost>9021</cpu_cost>
+         <time>00:00:01 </time>
+         <project>&quot;INVENTORIES&quot;.ROWID[ROWID,10]</project>
+         <predicates type="access">&quot;INVENTORIES&quot;.&quot;PRODUCT_ID&quot;=&quot;I&quot;.&quot;PRODUCT_ID&quot; AND &quot;INVENTORIES&quot;.&quot;WAREHOUSE_ID&quot;=:B2</predicates>
+         <qblock>SEL$F5BB74E1</qblock>
+         <object_alias>INVENTORIES@SEL$1</object_alias>
+        </operation>
+        <operation name="TABLE ACCESS" options="BY INDEX ROWID" id="10" depth="3" pos="2">
+         <object>INVENTORIES</object>
+         <card>2</card>
+         <bytes>28</bytes>
+         <cost>2</cost>
+         <io_cost>2</io_cost>
+         <cpu_cost>16333</cpu_cost>
+         <time>00:00:01 </time>
+         <project>&quot;QUANTITY_ON_HAND&quot;[NUMBER,22]</project>
+         <qblock>SEL$F5BB74E1</qblock>
+         <object_alias>INVENTORIES@SEL$1</object_alias>
+        </operation>
+       </plan>
+      </sql_plan>
+     </sql_plans>
+    </sql_details>
+   </report>
+   <!--FXTMODEL-->
+  </script>
+  <script language="JavaScript" type="text/javascript" src="emviewers/scripts/loadswf.js">
+   <!--Load report viewer-->
+  </script>
+  <iframe name="_history" frameborder="0" scrolling="no" width="22" height="0">
+   <html>
+    <head>
+     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+     <script type="text/javascript" language="JavaScript1.2" charset="utf-8">
+                var v = new top.Vars(top.getSearch(window));
+                var fv = v.toString(&apos;$_&apos;);
+              </script>
+    </head>
+    <body>
+     <script type="text/javascript" language="JavaScript1.2" charset="utf-8" src="emviewers/scripts/document.js">
+      <!--Run document script-->
+     </script>
+    </body>
+   </html>
+  </iframe>
+ </body>
+</html>
+

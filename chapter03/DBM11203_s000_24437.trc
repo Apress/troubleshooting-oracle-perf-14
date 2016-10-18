@@ -1,0 +1,136 @@
+Trace file /u00/app/oracle/diag/rdbms/dbm11203/DBM11203/trace/DBM11203_s000_24437.trc
+Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, Automatic Storage Management, Oracle Label Security, OLAP,
+Data Mining and Real Application Testing options
+ORACLE_HOME = /u00/app/oracle/product/11.2.0.3
+System name:	Linux
+Node name:	helicon.antognini.ch
+Release:	2.6.9-42.ELsmp
+Version:	#1 SMP Tue Aug 15 10:35:26 BST 2006
+Machine:	x86_64
+Instance name: DBM11203
+Redo thread mounted by this instance: 1
+Oracle process number: 25
+Unix process pid: 24437, image: oracle@helicon.antognini.ch (S000)
+
+
+*** 2012-11-30 11:00:16.642
+*** SESSION ID:(35.5) 2012-11-30 11:00:16.642
+*** CLIENT ID:() 2012-11-30 11:00:16.642
+*** SERVICE NAME:(DBM11203.antognini.ch) 2012-11-30 11:00:16.642
+*** MODULE NAME:(SQL*Plus) 2012-11-30 11:00:16.642
+*** ACTION NAME:() 2012-11-30 11:00:16.642
+ 
+WAIT #0: nam='SQL*Net message from client' ela= 41273640 driver id=1297371904 #bytes=1 p3=0 obj#=13891 tim=1354269616641928
+WAIT #0: nam='SQL*Net message from client' ela= 3 driver id=1297371904 #bytes=1 p3=0 obj#=13891 tim=1354269616642358
+=====================
+PARSING IN CURSOR #1819792872 len=18 dep=0 uid=34 oct=3 lid=34 tim=1354269616643489 hv=2866845384 ad='6ff49658' sqlid='520mkxqpf15q8'
+select 1 from dual
+END OF STMT
+PARSE #1819792872:c=1000,e=1090,p=0,cr=0,cu=0,mis=1,r=0,dep=0,og=1,plh=1388734953,tim=1354269616643488
+EXEC #1819792872:c=1000,e=755,p=0,cr=0,cu=0,mis=0,r=0,dep=0,og=1,plh=1388734953,tim=1354269616644316
+WAIT #1819792872: nam='SQL*Net message to client' ela= 4 driver id=1297371904 #bytes=1 p3=0 obj#=13891 tim=1354269616644403
+FETCH #1819792872:c=0,e=15,p=0,cr=0,cu=0,mis=0,r=1,dep=0,og=1,plh=1388734953,tim=1354269616644446
+STAT #1819792872 id=1 cnt=1 pid=0 pos=1 obj=0 op='FAST DUAL  (cr=0 pr=0 pw=0 time=3 us cost=2 size=0 card=1)'
+WAIT #1819792872: nam='SQL*Net message from client' ela= 354 driver id=1297371904 #bytes=1 p3=0 obj#=13891 tim=1354269616644913
+WAIT #0: nam='SQL*Net message from client' ela= 2 driver id=1297371904 #bytes=1 p3=0 obj#=13891 tim=1354269616644934
+FETCH #1819792872:c=0,e=2,p=0,cr=0,cu=0,mis=0,r=0,dep=0,og=0,plh=1388734953,tim=1354269616644953
+WAIT #1819792872: nam='SQL*Net message to client' ela= 2 driver id=1297371904 #bytes=1 p3=0 obj#=13891 tim=1354269616644974
+
+*** 2012-11-30 11:00:23.992
+*** SESSION ID:(36.27) 2012-11-30 11:00:23.992
+ 
+WAIT #1819792872: nam='SQL*Net message from client' ela= 47818478 driver id=1297371904 #bytes=1 p3=0 obj#=-1 tim=1354269623992751
+WAIT #0: nam='SQL*Net message from client' ela= 2 driver id=1297371904 #bytes=1 p3=0 obj#=-1 tim=1354269623992820
+=====================
+PARSING IN CURSOR #1819525968 len=18 dep=0 uid=34 oct=3 lid=34 tim=1354269623993878 hv=3950875941 ad='6ff2c9f8' sqlid='9fusd37prv595'
+select 2 from dual
+END OF STMT
+PARSE #1819525968:c=1000,e=998,p=0,cr=0,cu=0,mis=1,r=0,dep=0,og=1,plh=1388734953,tim=1354269623993867
+EXEC #1819525968:c=0,e=30,p=0,cr=0,cu=0,mis=0,r=0,dep=0,og=1,plh=1388734953,tim=1354269623993972
+WAIT #1819525968: nam='SQL*Net message to client' ela= 4 driver id=1297371904 #bytes=1 p3=0 obj#=-1 tim=1354269623994030
+FETCH #1819525968:c=0,e=28,p=0,cr=0,cu=0,mis=0,r=1,dep=0,og=1,plh=1388734953,tim=1354269623994084
+STAT #1819525968 id=1 cnt=1 pid=0 pos=1 obj=0 op='FAST DUAL  (cr=0 pr=0 pw=0 time=3 us cost=2 size=0 card=1)'
+WAIT #1819525968: nam='SQL*Net message from client' ela= 324 driver id=1297371904 #bytes=1 p3=0 obj#=-1 tim=1354269623994520
+WAIT #0: nam='SQL*Net message from client' ela= 1 driver id=1297371904 #bytes=1 p3=0 obj#=-1 tim=1354269623994541
+FETCH #1819525968:c=0,e=1,p=0,cr=0,cu=0,mis=0,r=0,dep=0,og=0,plh=1388734953,tim=1354269623994560
+WAIT #1819525968: nam='SQL*Net message to client' ela= 2 driver id=1297371904 #bytes=1 p3=0 obj#=-1 tim=1354269623994581
+
+*** 2012-11-30 11:00:32.696
+*** SESSION ID:(35.5) 2012-11-30 11:00:32.696
+ 
+WAIT #1819525968: nam='SQL*Net message from client' ela= 16051813 driver id=1297371904 #bytes=1 p3=0 obj#=13891 tim=1354269632696803
+WAIT #0: nam='SQL*Net message from client' ela= 3 driver id=1297371904 #bytes=1 p3=0 obj#=13891 tim=1354269632696865
+CLOSE #1819792872:c=0,e=10,dep=0,type=0,tim=1354269632696933
+=====================
+PARSING IN CURSOR #1819792872 len=18 dep=0 uid=34 oct=3 lid=34 tim=1354269632698072 hv=3213122881 ad='6ff2b760' sqlid='1rqd29uzs8ra1'
+select 3 from dual
+END OF STMT
+PARSE #1819792872:c=1000,e=1073,p=0,cr=0,cu=0,mis=1,r=0,dep=0,og=1,plh=1388734953,tim=1354269632698071
+EXEC #1819792872:c=0,e=33,p=0,cr=0,cu=0,mis=0,r=0,dep=0,og=1,plh=1388734953,tim=1354269632698159
+WAIT #1819792872: nam='SQL*Net message to client' ela= 5 driver id=1297371904 #bytes=1 p3=0 obj#=13891 tim=1354269632698235
+FETCH #1819792872:c=0,e=15,p=0,cr=0,cu=0,mis=0,r=1,dep=0,og=1,plh=1388734953,tim=1354269632698277
+STAT #1819792872 id=1 cnt=1 pid=0 pos=1 obj=0 op='FAST DUAL  (cr=0 pr=0 pw=0 time=3 us cost=2 size=0 card=1)'
+WAIT #1819792872: nam='SQL*Net message from client' ela= 343 driver id=1297371904 #bytes=1 p3=0 obj#=13891 tim=1354269632698725
+WAIT #0: nam='SQL*Net message from client' ela= 2 driver id=1297371904 #bytes=1 p3=0 obj#=13891 tim=1354269632698746
+FETCH #1819792872:c=0,e=2,p=0,cr=0,cu=0,mis=0,r=0,dep=0,og=0,plh=1388734953,tim=1354269632698787
+WAIT #1819792872: nam='SQL*Net message to client' ela= 1 driver id=1297371904 #bytes=1 p3=0 obj#=13891 tim=1354269632698807
+
+*** 2012-11-30 11:00:39.589
+*** SESSION ID:(37.7) 2012-11-30 11:00:39.589
+ 
+WAIT #1819792872: nam='SQL*Net message from client' ela= 62216927 driver id=1297371904 #bytes=1 p3=0 obj#=-1 tim=1354269639589411
+WAIT #0: nam='SQL*Net message from client' ela= 3 driver id=1297371904 #bytes=1 p3=0 obj#=-1 tim=1354269639589495
+=====================
+PARSING IN CURSOR #1819296576 len=18 dep=0 uid=34 oct=3 lid=34 tim=1354269639590545 hv=3900028422 ad='6ff2ad20' sqlid='a5dastgn7bdh6'
+select 4 from dual
+END OF STMT
+PARSE #1819296576:c=1000,e=1008,p=0,cr=0,cu=0,mis=1,r=0,dep=0,og=1,plh=1388734953,tim=1354269639590543
+EXEC #1819296576:c=0,e=34,p=0,cr=0,cu=0,mis=0,r=0,dep=0,og=1,plh=1388734953,tim=1354269639590633
+WAIT #1819296576: nam='SQL*Net message to client' ela= 5 driver id=1297371904 #bytes=1 p3=0 obj#=-1 tim=1354269639590692
+FETCH #1819296576:c=0,e=53,p=0,cr=0,cu=0,mis=0,r=1,dep=0,og=1,plh=1388734953,tim=1354269639590795
+STAT #1819296576 id=1 cnt=1 pid=0 pos=1 obj=0 op='FAST DUAL  (cr=0 pr=0 pw=0 time=4 us cost=2 size=0 card=1)'
+WAIT #1819296576: nam='SQL*Net message from client' ela= 341 driver id=1297371904 #bytes=1 p3=0 obj#=-1 tim=1354269639591220
+WAIT #0: nam='SQL*Net message from client' ela= 2 driver id=1297371904 #bytes=1 p3=0 obj#=-1 tim=1354269639591242
+FETCH #1819296576:c=0,e=1,p=0,cr=0,cu=0,mis=0,r=0,dep=0,og=0,plh=1388734953,tim=1354269639591261
+WAIT #1819296576: nam='SQL*Net message to client' ela= 2 driver id=1297371904 #bytes=1 p3=0 obj#=-1 tim=1354269639591282
+
+*** 2012-11-30 11:00:45.236
+*** SESSION ID:(36.27) 2012-11-30 11:00:45.236
+ 
+WAIT #1819296576: nam='SQL*Net message from client' ela= 21241683 driver id=1297371904 #bytes=1 p3=0 obj#=-1 tim=1354269645236280
+WAIT #0: nam='SQL*Net message from client' ela= 3 driver id=1297371904 #bytes=1 p3=0 obj#=-1 tim=1354269645236359
+CLOSE #1819525968:c=0,e=10,dep=0,type=0,tim=1354269645236401
+=====================
+PARSING IN CURSOR #1819525968 len=18 dep=0 uid=34 oct=3 lid=34 tim=1354269645237436 hv=1355889921 ad='6ff29230' sqlid='3b3s1w98d2g81'
+select 5 from dual
+END OF STMT
+PARSE #1819525968:c=999,e=982,p=0,cr=0,cu=0,mis=1,r=0,dep=0,og=1,plh=1388734953,tim=1354269645237435
+EXEC #1819525968:c=1000,e=54,p=0,cr=0,cu=0,mis=0,r=0,dep=0,og=1,plh=1388734953,tim=1354269645237541
+WAIT #1819525968: nam='SQL*Net message to client' ela= 4 driver id=1297371904 #bytes=1 p3=0 obj#=-1 tim=1354269645237622
+FETCH #1819525968:c=0,e=15,p=0,cr=0,cu=0,mis=0,r=1,dep=0,og=1,plh=1388734953,tim=1354269645237663
+STAT #1819525968 id=1 cnt=1 pid=0 pos=1 obj=0 op='FAST DUAL  (cr=0 pr=0 pw=0 time=3 us cost=2 size=0 card=1)'
+WAIT #1819525968: nam='SQL*Net message from client' ela= 309 driver id=1297371904 #bytes=1 p3=0 obj#=-1 tim=1354269645238052
+WAIT #0: nam='SQL*Net message from client' ela= 2 driver id=1297371904 #bytes=1 p3=0 obj#=-1 tim=1354269645238073
+FETCH #1819525968:c=0,e=1,p=0,cr=0,cu=0,mis=0,r=0,dep=0,og=0,plh=1388734953,tim=1354269645238117
+WAIT #1819525968: nam='SQL*Net message to client' ela= 2 driver id=1297371904 #bytes=1 p3=0 obj#=-1 tim=1354269645238138
+
+*** 2012-11-30 11:00:49.427
+*** SESSION ID:(37.7) 2012-11-30 11:00:49.427
+ 
+WAIT #1819525968: nam='SQL*Net message from client' ela= 9836380 driver id=1297371904 #bytes=1 p3=0 obj#=-1 tim=1354269649427679
+WAIT #0: nam='SQL*Net message from client' ela= 2 driver id=1297371904 #bytes=1 p3=0 obj#=-1 tim=1354269649427734
+CLOSE #1819296576:c=0,e=11,dep=0,type=0,tim=1354269649427775
+=====================
+PARSING IN CURSOR #1819296576 len=18 dep=0 uid=34 oct=3 lid=34 tim=1354269649428777 hv=124436177 ad='6ff287f0' sqlid='2ny8nd43qpgqj'
+select 6 from dual
+END OF STMT
+PARSE #1819296576:c=1000,e=951,p=0,cr=0,cu=0,mis=1,r=0,dep=0,og=1,plh=1388734953,tim=1354269649428775
+EXEC #1819296576:c=0,e=27,p=0,cr=0,cu=0,mis=0,r=0,dep=0,og=1,plh=1388734953,tim=1354269649428854
+WAIT #1819296576: nam='SQL*Net message to client' ela= 4 driver id=1297371904 #bytes=1 p3=0 obj#=-1 tim=1354269649428907
+FETCH #1819296576:c=0,e=13,p=0,cr=0,cu=0,mis=0,r=1,dep=0,og=1,plh=1388734953,tim=1354269649428945
+STAT #1819296576 id=1 cnt=1 pid=0 pos=1 obj=0 op='FAST DUAL  (cr=0 pr=0 pw=0 time=3 us cost=2 size=0 card=1)'
+WAIT #1819296576: nam='SQL*Net message from client' ela= 286 driver id=1297371904 #bytes=1 p3=0 obj#=-1 tim=1354269649429308
+WAIT #0: nam='SQL*Net message from client' ela= 2 driver id=1297371904 #bytes=1 p3=0 obj#=-1 tim=1354269649429363
+FETCH #1819296576:c=0,e=1,p=0,cr=0,cu=0,mis=0,r=0,dep=0,og=0,plh=1388734953,tim=1354269649429382
+WAIT #1819296576: nam='SQL*Net message to client' ela= 2 driver id=1297371904 #bytes=1 p3=0 obj#=-1 tim=1354269649429403
